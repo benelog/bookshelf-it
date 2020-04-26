@@ -1,0 +1,10 @@
+Date: 2008-11-30
+Title: Head First Object Oriented Analysis & Design
+Slug: head_first_object_oriented_analysis_and_design.md
+Tags: Agile,방법론,TDD
+
+## 인상 싶은 부분
+### Chapter 2 (번역판 p109)
+> 유즈케이스는 새로 만든 시스템이나 소프트웨어 변경 사항에 대한 요구사항을 찾아내는 방법입니다.
+> 각 유즈케이스는 *특정목표*를 달성하기 위해 시스템이 사용자 또는 다른 시스템과 어떻게 *상호작용*하는지를 전달하는 
+> 하나 이상의 *시나리오*를 제공합니다.

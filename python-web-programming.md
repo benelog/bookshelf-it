@@ -1,0 +1,13 @@
+Date: 2014-01-28
+Title: 파이쎤 웹 프로그래밍
+Slug: python-web-programming.md
+Tags: python, framework
+
+## 인상싶은 내용
+### 73쪽
+플라스크의 세션은 서버 사이드 세션이 아닌 암호화된 쿠키형태
+
+### 148쪽
+서버사이드 Cache를 이용한 세션구현, Redis를 이용한 세션 구현
+
+
