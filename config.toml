@@ -4,7 +4,7 @@ defaultContentLanguage = "ko"
 title = "정상혁의 IT 책장"
 theme = "papercss-hugo-theme"
 disqusShortname = "bookshelf-it-benelog"
-googleAnalytics = "UA-138559685-2"
+googleAnalytics = "UA-138559685-3"
 
 [taxonomies]
   tag = "tags"
