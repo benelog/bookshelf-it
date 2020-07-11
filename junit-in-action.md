@@ -1,7 +1,7 @@
-Date: 2011-08-08
-Title: JUnit in Action
-Slug: junit_in_action
-Tags: 개발,agile,java
+---
+date: 2011-08-08
+title: JUnit in Action
+tags: 개발,agile,java
 
 ## 인상적인 내용
 ### p5

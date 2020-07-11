@@ -1,7 +1,7 @@
-Date: 2005-01-02
-Title: 테스트_주도_개발
-Slug: test_drvein_development_by_example
-Tags: Agile,TDD
+---
+date: 2005-01-02
+title: 테스트_주도_개발
+tags: Agile,TDD
 
 ## 인상 깊은 부분
 

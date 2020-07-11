@@ -1,7 +1,7 @@
-Date: 2011-01-11
-Title: 프로그래머가 몰랐던 멀티코어 CPU 이야기
-Slug: 프로그래머가_몰랐던_멀티코어_CPU_이야기
-Tags: hardware
+---
+date: 2011-01-11
+title: 프로그래머가 몰랐던 멀티코어 CPU 이야기
+tags: hardware
 
 ## 인상적인 부분
 ### p17 

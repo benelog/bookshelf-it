@@ -1,7 +1,7 @@
-Date: 2014-03-31
-Title: 폴리글랫 프로그래밍
-Slug: polyglot_progammming
-Tags: 엣세이
+---
+date: 2014-03-31
+title: 폴리글랫 프로그래밍
+tags: 엣세이
 
 ## 인상 깊은 부분
 

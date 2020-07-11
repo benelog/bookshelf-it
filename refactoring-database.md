@@ -1,7 +1,7 @@
-Date: 2010-11-28
-Title: Refactoring Database
-Slug: refacotoring_database
-Tags: db, refactoring
+---
+date: 2010-11-28
+title: Refactoring Database
+tags: db, refactoring
 
 ## 인상깊은 부분
 

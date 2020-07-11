@@ -1,7 +1,7 @@
-Date: 2009-12-07
-Title: 엔터프라이즈 SOA
-Slug: enterprise_soa
-Tags: 설계
+---
+date: 2009-12-07
+title: 엔터프라이즈 SOA
+tags: 설계
 
 ## 감상
 > SOA는 구체적인 기술이 아니라, 구조를 의미한다.

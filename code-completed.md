@@ -1,7 +1,7 @@
-Date: 2007-07-28
-Title:Code completed 2nd Edtion
-Slug: code_completed_2ed
-Tags: SW공학
+---
+date: 2007-07-28
+title:Code completed 2nd Edtion
+tags: SW공학
 
 
 ## 인상적인 내용

@@ -1,7 +1,7 @@
-Date: 2005-11-28
-Title: Refactoring
-Slug: refacotoring
-Tags: refactoring
+---
+date: 2005-11-28
+title: Refactoring
+tags: refactoring
 
 ## 인상깊은 부분
 

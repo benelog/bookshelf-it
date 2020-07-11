@@ -1,7 +1,7 @@
-Date: 2013-12-03
-Title: Debug it! 실용주의 디버깅
-Slug: debug_it
-Tags: debugging, test, TDD
+---
+date: 2013-12-03
+title: Debug it! 실용주의 디버깅
+tags: debugging, test, TDD
 
 ![Debug it! 실용주의 디버깅](http://image.yes24.com/momo/TopCate86/MidCate05/8544608.jpg)
 

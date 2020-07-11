@@ -1,7 +1,7 @@
-Date: 2011-09-11
-Title: Pro web2.0 mashups
-Slug: pro_web2.0 mashups
-Tags: openapi
+---
+date: 2011-09-11
+title: Pro web2.0 mashups
+tags: openapi
 
 
 ## 인상 깊은 내용
