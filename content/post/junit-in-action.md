@@ -1,7 +1,7 @@
 ---
 date: 2011-08-08
 title: JUnit in Action
-tags:[개발,agile,java]
+tags: [개발,agile,java]
 ---
 
 ## 인상적인 내용

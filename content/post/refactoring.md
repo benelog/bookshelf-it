@@ -1,7 +1,7 @@
 ---
 date: 2005-11-28
 title: Refactoring
-tags:[refactoring]
+tags: [refactoring]
 ---
 
 ## 인상깊은 부분

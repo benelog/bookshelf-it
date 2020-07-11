@@ -1,7 +1,7 @@
 ---
 date: 2010-02-06
 title: Software Architecture In Practice 2nd Edition
-tags:[설계]
+tags: [설계]
 ---
 
 ## 감상

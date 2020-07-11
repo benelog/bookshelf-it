@@ -1,7 +1,7 @@
 ---
 date: 2009-09-10
 title: 임베디드_C를_위한_TDD
-tags:[tdd]
+tags: [tdd]
 ---
 
 ## 인상깊은 부분

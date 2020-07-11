@@ -1,7 +1,7 @@
 ---
 date: 2010-11-24
 title: XUnit Test Patterns
-tags:[agile,TDD]
+tags: [agile,TDD]
 ---
 
 ## 생각 메모

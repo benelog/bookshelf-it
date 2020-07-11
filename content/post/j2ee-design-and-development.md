@@ -1,7 +1,7 @@
 ---
 date: 2009-11-08
 title: Expert One-on-One J2EE Design and Development
-tags:[java,spring,구현,설계]
+tags: [java,spring,구현,설계]
 ---
 
 ## 감상

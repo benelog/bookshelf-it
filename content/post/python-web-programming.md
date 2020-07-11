@@ -1,7 +1,7 @@
 ---
 date: 2014-01-28
 title: 파이쎤 웹 프로그래밍
-tags:[python, framework]
+tags: [python, framework]
 ---
 
 ## 인상싶은 내용
