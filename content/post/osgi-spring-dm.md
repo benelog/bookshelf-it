@@ -1,7 +1,7 @@
 ---
 date: 2009-09-10
 title: 실전 OSGI & Sprig DM
-tags: [spring, osgi]
+tags: [spring, framework]
 ---
 
 ## 인상싶은 내용

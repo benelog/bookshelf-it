@@ -1,7 +1,7 @@
 ---
 date: 2008-11-30
 title: Head First Object Oriented Analysis & Design
-tags: [Aile,객체지향, 방법론,설계]
+tags: [aile, 객체지향, 방법론, 설계]
 ---
 
 ## 인상 싶은 부분

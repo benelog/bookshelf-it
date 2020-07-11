@@ -1,7 +1,7 @@
 ---
 date: 2011-09-11
 title: Pro web2.0 mashups
-tags: [openapi]
+tags: [open-api]
 ---
 
 ## 인상 깊은 내용
