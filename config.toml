@@ -1,4 +1,4 @@
-aseURL = "https://bookshelf-it.benelog.net/"
+baseURL = "https://bookshelf-it.benelog.net/"
 languageCode = "ko-KR	"
 defaultContentLanguage = "ko"
 title = "정상혁의 IT 책장"
