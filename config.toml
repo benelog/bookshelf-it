@@ -1,0 +1,31 @@
+aseURL = "https://bookshelf-it.benelog.net/"
+languageCode = "ko-KR	"
+defaultContentLanguage = "ko"
+title = "정상혁의 IT 책장"
+theme = "papercss-hugo-theme"
+disqusShortname = "bookshelf-it-benelog"
+googleAnalytics = "UA-138559685-2"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
+
+[params]
+  homeMetaContent = "정상혁의 IT 서재"
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "2006-01-02"
+
+[menu]
+  [[menu.nav]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.nav]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 4

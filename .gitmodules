@@ -1,0 +1,3 @@
+[submodule "themes/papercss-hugo-theme"]
+	path = themes/papercss-hugo-theme
+	url = https://github.com/benelog/papercss-hugo-theme.git
