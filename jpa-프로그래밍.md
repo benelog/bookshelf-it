@@ -1,7 +1,8 @@
 ---
 date: 2015-07-28
 title: JPA 프로그래밍
-tags: java, jpa
+tags:[java, jpa]
+---
 
 ## 정리
 ### 485쪽

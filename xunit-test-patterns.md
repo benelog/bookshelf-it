@@ -1,7 +1,8 @@
 ---
 date: 2010-11-24
 title: XUnit Test Patterns
-tags: agile,TDD
+tags:[agile,TDD]
+---
 
 ## 생각 메모
 - 체계적으로 잘 정리되어 있으나, 책 두께에 비하면 핵심은 많지는 않음

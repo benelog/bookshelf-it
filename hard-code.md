@@ -1,7 +1,8 @@
 ---
 date: 2010-08-25
 title: 하드코드(Hard code)
-tags: 방법론
+tags:[방법론]
+---
 
 ## 인상깊은 내용
 

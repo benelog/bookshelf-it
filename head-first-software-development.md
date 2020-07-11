@@ -1,7 +1,8 @@
 ---
 date: 2008-11-30
 title: Head First Software Development
-tags: Agile,방법론,TDD
+tags:[Agile,방법론,TDD]
+---
 
 ## 인상 싶은 부분
 ### Chapter 9 마지막 (번역판 p386)

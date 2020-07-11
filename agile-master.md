@@ -1,7 +1,8 @@
 ---
 date: 2012-03-11
 title: 애자일 마스터
-tags: agile,SW공학
+tags:[agile,SW공학]
+---
 
 ## 생각 메모
 - 프로젝트 목표 공유의 중요성. not list

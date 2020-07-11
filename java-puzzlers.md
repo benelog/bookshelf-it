@@ -1,7 +1,8 @@
 ---
 date: 2007-06-15
 title: Java puzzlers
-tags: java
+tags:[java]
+---
 
 ## 인상싶은 내용
 ### puzzle 57 (141쪽)

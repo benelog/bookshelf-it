@@ -1,7 +1,8 @@
 ---
 date: 2005-01-02
 title: 테스트_주도_개발
-tags: Agile,TDD
+tags:[Agile,TDD]
+---
 
 ## 인상 깊은 부분
 
