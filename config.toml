@@ -1,7 +1,7 @@
 baseURL = "https://bookshelf-it.benelog.net/"
 languageCode = "ko-KR	"
 defaultContentLanguage = "ko"
-title = "정상혁의 IT 책장"
+title = "IT 책장"
 theme = "papercss-hugo-theme"
 disqusShortname = "bookshelf-it-benelog"
 googleAnalytics = "UA-138559685-3"
@@ -16,7 +16,7 @@ googleAnalytics = "UA-138559685-3"
   quality = 99
 
 [params]
-  homeMetaContent = "정상혁의 IT 서재"
+  homeMetaContent = "IT 책장"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
 
@@ -28,4 +28,8 @@ googleAnalytics = "UA-138559685-3"
   [[menu.nav]]
     name = "RSS"
     url = "/index.xml"
+    weight = 3
+  [[menu.nav]]
+    name = "Source"
+    url = "https://github.com/benelog/bookshelf-it"
     weight = 4
