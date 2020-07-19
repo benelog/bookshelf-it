@@ -4,7 +4,7 @@ title: Ship it! 성공적인 소프트웨어 개발 프로젝트를 위한 실�
 tags: [방법론, agile]
 ---
 
-[![ship it](http://image.yes24.com/momo/TopCate57/MidCate09/5683498.jpg)](http://www.yes24.com/Goods/FTGoodsView.aspx?goodsNo=2657930&CategoryNumber=001001003005006001)
+[![tags: [ it](https://image.yes24.com/momo/TopCate57/MidCate09/5683498.jpg)](http://www.yes24.com/Goods/FTGoodsView.aspx?goodsNo=2657930&CategoryNumber=001001003005006001)
 
 ## 감상
  마이크로소프트웨어지에 '커뮤니티 노트'라는 컬럼을 연재하고 계신 최재훈님이 번역하신 책입니다. 사실 처음 책의 목차만을 보았을 때는 '실용주의 프로그래머'와 겹쳐지는 내용이 많을 것 같은 느낌에 큰 기대를 하지는 않고 읽기 시작했었습니다. 아마  제가 블로그를 통해서 이 책을 알지 못하고 서점에서 우연찮게 만났다면 책을 안 사고 지나쳤을 수도 있었을 것입니다. 그런데 다 읽고나니 다음에 프로젝트 시작할 때는 사비로라도 이 책을 사서 프로젝트 팀원들에게 돌리고 싶다는 생각이 들더군요.

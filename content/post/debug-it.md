@@ -4,7 +4,7 @@ title: Debug it! 실용주의 디버깅
 tags: [debugging, test]
 ---
 
-![Debug it! 실용주의 디버깅](http://image.yes24.com/momo/TopCate86/MidCate05/8544608.jpg)
+![Debug it! 실용주의 디버깅](https://image.yes24.com/momo/TopCate86/MidCate05/8544608.jpg)
 
 ( 이미지 출처 Yes24 : <http://www.yes24.com/24/Goods/3937865?Acode=101> )
 
