@@ -1,6 +1,6 @@
 ---
 title: 생계형 개발자 SI에서 살아남기
-tags: [한국-it, 경력, 개발-수필]
+tags: [한국-it, 경력, 개발-수필, programmer]
 date: 2020-06-28
 ---
 
