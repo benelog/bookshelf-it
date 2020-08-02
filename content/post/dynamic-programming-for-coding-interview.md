@@ -1,6 +1,6 @@
 ---
 title: Dynamic Programming for Coding Interviews
-tags: [alorithm, 면접]
+tags: [algorithm, 면접]
 date: 2020-07-21
 ---
 
