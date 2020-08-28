@@ -61,7 +61,7 @@ http://www.yes24.com/Goods/FTGoodsView.aspx?goodsNo=2657930&CategoryNumber=00100
 ## 인상 깊은 단락
 
 ### 1쪽
->  현재의 우리는 반복적으로 하는 행동의 결과이다. 그러므로 탁월함이란 행동이 아니라 습관이다. -아리스토텔레스  
+> 현재의 우리는 반복적으로 하는 행동의 결과이다. 그러므로 탁월함이란 행동이 아니라 습관이다. -아리스토텔레스
 
 ### 57쪽
 단위테스트, 기능테스트, 성능테스트, 부하테스트
@@ -76,7 +76,7 @@ http://www.yes24.com/Goods/FTGoodsView.aspx?goodsNo=2657930&CategoryNumber=00100
 > 에릭 레이몬드가 말했듯이 "눈이 많으면 찾지 못할 버그는 없습니다."
 
 ## 114쪽
-겸손한 프로그래머 :  Humble programmer : http://www.cs.utexas.edu/users/EWD/ewd03xx/EWD340.PDF
+겸손한 프로그래머 : Humble programmer : http://www.cs.utexas.edu/users/EWD/ewd03xx/EWD340.PDF
 
 ### 141쪽
 > 최고의 아키텍처는 상아탑의 '아키텍트'에게서 나오지 않습니다. 공동의 노력을 기울여야 최고의 아키텍처가 나옵니다. 전문가 한 명이 독주해서 완성한 아키텍처 문서를 여러분 앞에 던져 놓고 가게 하지 말고, 팀이 함께 일해서 모든 이의 경험을 발휘하고 쌓아나가도록 하세요.
