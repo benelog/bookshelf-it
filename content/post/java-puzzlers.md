@@ -25,7 +25,7 @@ String 상수와 IdentityHashMap을 쓸 때의 문제
 @Override를 붙이면 도움이 되지 않을까?
 
 ### puzzle 71 (179쪽)
-상수 인터페이스 구현은 절대로 피해야한다.[EJ Item 17]
+> 상수 인터페이스 구현은 절대로 피해야한다.[EJ Item 17]
 static 임포트 기능은 꼭필요한 경우에만 최소한으로 사용하라
 
 
