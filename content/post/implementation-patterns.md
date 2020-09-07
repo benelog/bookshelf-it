@@ -1,7 +1,7 @@
 ---
 date: 2008-02-14
 title: 켄트 벡의 구현 패턴
-tags: [java, pattern]
+tags: [java, pattern, 구현-기법]
 ---
 
 ## 정리
