@@ -1,6 +1,6 @@
 ---
 title: 테크니컬 리더
-tags: [관리, 경력]
+tags: [관리, 경력, gerald-m-weinberg]
 date: 2020-09-08
 ---
 
