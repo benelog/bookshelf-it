@@ -1,7 +1,7 @@
 ---
 date: 2007-07-28
 title: Code completed 2nd Edtion
-tags: [SW공학]
+tags: [구현-지침]
 ---
 
 ## 인상적인 내용
