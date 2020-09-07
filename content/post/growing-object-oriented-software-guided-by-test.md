@@ -1,6 +1,6 @@
 ---
 title: Growing Object-Oriented Software, Guided by test
-tags: [객체지향, 설계,test]
+tags: [객체지향, 설계, test, tdd]
 date: 2020-09-05
 ---
 

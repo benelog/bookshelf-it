@@ -1,7 +1,7 @@
 ---
 date: 2010-06-20
-title: 테스트 주도 개발 고품질 쾌속개발을 위한 TDD 실천법과 도구
-tags: [agile, tdd, test]
+title: "테스트 주도 개발: 고품질 쾌속개발을 위한 TDD 실천법과 도구"
+tags: [tdd, test]
 
 ---
 ## 감상

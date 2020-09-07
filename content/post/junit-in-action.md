@@ -1,7 +1,7 @@
 ---
 date: 2011-08-08
 title: JUnit in Action
-tags: [test, java, framework]
+tags: [test, tdd, java, framework]
 ---
 
 ## 인상적인 단락
