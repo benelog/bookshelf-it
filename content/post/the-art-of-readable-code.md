@@ -1,7 +1,7 @@
 ---
 title: 읽기 좋은 코드가 좋은 코드다
 date: 2012-04-10
-tags: [구현-기법]
+tags: [구현-지침]
 ---
 
 ![](https://image.yes24.com/momo/TopCate178/MidCate10/17793676.jpg)
