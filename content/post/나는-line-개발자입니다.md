@@ -1,8 +1,12 @@
 ---
-title: 벤츠 타는 프로그래머
+title: 나는 LINE 개발자입니다
 tags: [한국-it, programmer, 개발-수필]
 date: 2019-09-21
 ---
+
+![](https://image.yes24.com/goods/78226025/800x0)
+
+[나는 LINE 개발자입니다 : 라인의 개발 고수 12인의 도전과 기회, 성장의 개발 라이프](http://www.yes24.com/Product/Goods/78226025)
 
 ## 감상
 
