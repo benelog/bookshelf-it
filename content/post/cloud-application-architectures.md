@@ -31,9 +31,7 @@ http://bastille-linux.sourceforge.net/ 언급
 식별키 관리, UUID
 
 ### p168
-침입참지에 쓰이는 OSSEC ( https://www.ossec.net/ )
+침입참지에 쓰이는 OSSEC (https://www.ossec.net/)
 
 ### p175
 > 대부분의 비즈니스가 겪는 냉엄한 현실은 24시간의 데이터 손실이 제로 다운 타임, 제로 데이터 손실 인프라스트럭처를 유지하는 비용보다 더 작다는 것이다.
-
-
