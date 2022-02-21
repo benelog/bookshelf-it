@@ -15,4 +15,4 @@ http://www.yes24.com/Product/Goods/13488109?OzSrank=1
 > 파라미터 라우팅
 
 ### 177쪽
-> 이거( eager) 방식은 간단하지만 레이지(lazy)방식은 효율적이다.
+> 이거(eager) 방식은 간단하지만 레이지(lazy)방식은 효율적이다.
