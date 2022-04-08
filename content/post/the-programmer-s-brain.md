@@ -1,7 +1,7 @@
 ---
 title: 프로그래머의 뇌
 tags: [구현-지침, 뇌]
-date: 2022-04-23
+date: 2022-04-03
 ---
 
 ![](https://image.yes24.com/goods/105911017/XL)
