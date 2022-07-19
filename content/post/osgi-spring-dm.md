@@ -1,6 +1,6 @@
 ---
 date: 2009-09-10
-title: 실전 OSGI & Sprig DM
+title: 실전 OSGI & Spring DM
 tags: [spring, framework]
 ---
 
