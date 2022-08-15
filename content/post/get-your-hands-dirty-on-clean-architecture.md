@@ -90,9 +90,18 @@ date: 2021-03-27
 - 유지보수 가능한 소프트웨어를 만드는 데 어떻게 도움이 될까?
 - 의존성 역전
 
-### p52
+(메모)
+2003년에 스프링의 창시자 로드 존슨이 쓴 'Expert one to one J2EE Design and Developement'의 58페이지에도 아래와 같은 언급이 있다.
+
+> In a well-designed J2EE web application, the web tier will be very thin. It will only contain code that's necessary to invoke middle-tier business interfaces on user actions and to display the result.
+
+오랜 시간이 지나도 이 원칙은 비슷하게 언급된다.
+
+### p52 (번역판 p57)
 
 > Anything that has to do with HTTP must not leak into the application layer.
+
+> HTTP 와 관련된 것은 애플리케이션 계층으로 침투해서는 안된다.
 
 ### p58 (번역판 p62)
 
