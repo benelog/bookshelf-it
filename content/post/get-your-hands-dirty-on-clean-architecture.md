@@ -4,10 +4,22 @@ tags: [설계, architecture]
 date: 2021-03-27
 ---
 
-웹 어플케이션의 구조를 어떻게 잡을지는 프로젝트마다 매번하는 고민이다.
-이 고민에 생각할 거리를 더 던져주는 유익하면서도 재미있는 책이였다.
+## 감상 2022.09.05
 
-원서로 먼저 읽고 번역서로 한 번 더 읽었다.
+책도 얇은 편이지만 재미가 있어서 중간에 끊지를 못하고 끝까지 읽었던 기억이 있습니다.
+웹 어플케이션의 구조를 어떻게 잡을지는 프로젝트마다 매번하는 고민인데, 이 고민에 생각할 거리를 더 던져주는 점에서 유익했습니다.
+엉클밥 아저씨의 '클린 아키텍처'가 코드가 없어서 아쉬웠던 점을 이 책에서 많이 채워주는 면도 있습니다.
+
+이 책에서 권장하는 구조가 꼭 정답은 아닐 수도 있습니다. 이 책에서 제시한 '계층형 아키텍처'의 문제점이 계층형을 쓰면서 극복이 불가능한 문제는 아닐수도 있다는 생각도 듭니다. 책에서 제시한 persistent layer와 serice layer의 의존관계 역전을 실무 사례를 아직까지 못 본적은 없습니다.
+
+그런데 이 책에서는 아키텍처 결정을 할때 염두해둘만하다는 하나의 방향성을 담고 있기에 읽어볼만하다고 생각합니다.
+그 방향성은 '복잡한 의존성으로 인해 고치기 어려운 짧은 코드를 만들기보다는 때로는 더 많은 코드를 번거롭게 작성하는 것을 감수할수도 있다.' 이라고 저는 느꼈습니다.
+
+----
+
+## 감상 2022.08.15
+원서로 먼저 읽고 번역서로 한 번 더 읽고 인상깊은 단락과 메모를 정리했다. 처음 읽었을 때에는 그냥 지나쳤던 단락들도 눈에 다시 띄는 내용이 많다.
+
 
 ## 1 : What's Wrong With Layers? ( 계층형 아키텍처의 문제는 무엇일까? )
 
@@ -75,7 +87,7 @@ date: 2021-03-27
 > So, if we share the same input model between both use cases, we'd have to allow a null account ID to be passed into the "Update Account Details" use case and a null owner ID to be passed into the "Register Account" use case. Allowing null as a valid state of a field in our immutable command object is a code smell by itself.
 
 > 그래서 두 유스케이스에서 같은 입력 모델을 공유할 경우 '계좌 정보 업데이트하기' 에서는 계좌 ID에 null 값을 허용해야 한다.
-> 불변 코맨드 객체의 필드에 대해서 null을 유효한 상태로 받드아ㄹ이는 것은 그 자체로 코드 냄새(code smell)다.
+> 불변 코맨드 객체의 필드에 대해서 null을 유효한 상태로 받아들이는 것은 그 자체로 코드 냄새(code smell)다.
 
 ### p42 (번역판 p45)
 
@@ -91,7 +103,7 @@ date: 2021-03-27
 - 의존성 역전
 
 (메모)
-2003년에 스프링의 창시자 로드 존슨이 쓴 'Expert one to one J2EE Design and Developement'의 58페이지에도 아래와 같은 언급이 있다.
+2003년에 스프링의 창시자 로드 존슨이 쓴 'Expert one to one J2EE Design and Development' 의 58페이지에도 아래와 같은 언급이 있다.
 
 > In a well-designed J2EE web application, the web tier will be very thin. It will only contain code that's necessary to invoke middle-tier business interfaces on user actions and to display the result.
 
@@ -212,9 +224,9 @@ date: 2021-03-27
 애노테이션이 달린 클래스를 특정 환경에 의존하지 않는 런타임에서 호출해도 그대로 쓸수 있기 때문에 POJO라는 의견을 들은적이 있고, 그것도 일리가 있는 말이다.
 `@Copponent`가 달린 클래스를 스프링에 대한 의존성은 Maven에서 optional이나 provided로 놓고 jar로  배포한다면, jar 쓰는 쪽에서 Spring에 대한 의존성을 추가하지 않고도 사용할 수 있다.
 
-하지만 그 클래스를 고쳐서 컴파일할때는 스프링에 대한 의존성이 필요하고, DI framework을 바꿀때 해당 애노테이션을 다 고쳐야한다는 점은 프레임워크에 대한 의존성/종석성/결합을 의미한다. 상속이나 interface보다는 약한 종속성이라 할지라도 종속성은 존재한다.
+하지만 그 클래스를 고쳐서 컴파일할때는 스프링에 대한 의존성이 필요하고, DI framework을 바꿀때 해당 애노테이션을 다 고쳐야한다는 점은 프레임워크에 대한 의존성/종속성/결합을 의미한다. 상속이나 interface보다는 약한 종속성이라 할지라도 종속성은 존재한다.
 
-다만 종석성의 수준을 단계별로 생각해볼 필요는 있고 때로는 애노테이션의 상대적으로 약한 종석성을 실용적으로 활용하는 전략도 선택할만하다고 본다.
+다만 종속성의 수준을 단계별로 생각해볼 필요는 있고 때로는 애노테이션의 상대적으로 약한 종석성을 실용적으로 활용하는 전략도 선택할만하다고 본다.
 
 ## 10 : Enforcing Architecture Boundaries (아키텍처 경계 강제하기)
 
@@ -240,7 +252,7 @@ ArchUnit 을 이용한 Hexgonal Architecture 검증 예제
 3. 새로 의존성을 추가하는 일이 의식적인 행동이 됨.
    - 의존성을 추가하기에 앞서 정말로 필요한지 생각할 여지가 생김.
 
-p122
+### p122
 
 > These advantages come with the added cost of having to maintain a build script, though, so the architecture should be somewhat stable before splitting it into different build modules.
 
@@ -263,7 +275,7 @@ Release it의 저자 마이클 나이가드가 제안한 아키텍처 결정 기
 - https://adr.github.io/
 
 ### 번역판 p138
-'Using DOmain Entities as Input or Output Models' (도메인 모델을 입출력 모델로 사용하기) 전략에 대해서 설명하면서
+'Using Domain Entities as Input or Output Models' (도메인 모델을 입출력 모델로 사용하기) 전략에 대해서 설명하면서
 
 > What makes this shortcut dangerous is the fact that many use cases start their lives as a simple create or update use case only to become beasts of complex domain logic over time.
 
