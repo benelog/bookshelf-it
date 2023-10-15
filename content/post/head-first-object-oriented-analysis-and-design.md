@@ -1,6 +1,6 @@
 ---
 title: Head First Object Oriented Analysis & Design
-tags: [agile, 객체지향, 방법론, 설계]
+tags: [agile, 객체지향, 방법론, 설계, head-first]
 date: 2008-11-30
 ---
 

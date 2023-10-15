@@ -1,6 +1,6 @@
 ---
 title: Head First Software Development
-tags: [agile, 방법론, tdd]
+tags: [agile, 방법론, tdd, head-first]
 date: 2008-11-30
 ---
 
