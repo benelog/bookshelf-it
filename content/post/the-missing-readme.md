@@ -114,7 +114,7 @@ https://www.yes24.com/Product/Goods/119108069
 
 > 데이터베이스 스키마 변경 같은 일부 변경 사항은 점진적으로 롤아웃할 수가 없으므로 특별히 더 주의해야 한다.
 
-> 또한 완전히 롤아웃됐거나 더 이상 사용하지 않는 기능 플래그는 반드시 정리하자. 기능 플래그 때문에 어지럽혀진 코드는 그 의미를 유추하기도 어려울 뿐더러 버그도 유발한다. 예를 들어 오랜 시간동안 켜져 있던 기능을 꺼버리면 재앙 수준의 문제가 발생하기도 한다. 기능 플래그를 정리하는 것도 후련이 필요하다. 나중에 플래그를 제거할 티켓을 미리 만들어두자.
+> 또한 완전히 롤아웃됐거나 더 이상 사용하지 않는 기능 플래그는 반드시 정리하자. 기능 플래그 때문에 어지럽혀진 코드는 그 의미를 유추하기도 어려울 뿐더러 버그도 유발한다. 예를 들어 오랜 시간동안 켜져 있던 기능을 꺼버리면 재앙 수준의 문제가 발생하기도 한다. 기능 플래그를 정리하는 것도 훈련이 필요하다. 나중에 플래그를 제거할 티켓을 미리 만들어두자.
 
 (의견) 이또한 절실하게 새겨두어야 할 문장이다.
 
@@ -211,6 +211,22 @@ Dark launching 소개
     - 11장, 13장, 14장, 15장 : 온콜, 비상 대기, 장애 처리, 포스트터모텀
 
 ### 10장 견고한 소프트웨어를 위한 기술 설계 절차
+- [동영상][Hammock Driven Development - Rich Hickey](https://www.youtube.com/watch?v=f84n5oFoZBc) : 복잡한 소프트웨어 설계 과정을 가장 잘 설명한 자료라고 소개됨.
+- [웹]대규모 오픈소스 프로젝트의 설계 과정
+    - [파이썬 개선 제안(PEP)](https://github.com/python/peps)
+    - [카프카 개선 제안(KIP)](https://cwiki.apache.org/confluence/display/kafka/kafka+improvement+proposals)
+    - [러스트 검토 요청(RFCs)](https://github.com/rust-lang/rfcs)
+- [웹][Effective Software Design Documents](https://wecode.wepay.com/posts/effective-software-design-documents) : 위페이가 설계를 수행하는 방법과 그 방법이 어떻게 개선돼왔는지를 설명
+    - [설계 문서 템플릿](https://github.com/wepay/design_doc_template)
+- [책]Elements of Style : 영어 글쓰기에 대한 유명한 책으로 번역판도 여러번 나왔다.
+     - [글쓰기의 요소(삽화판)](https://product.kyobobook.co.kr/detail/S000001729444) (2016년 출판, 장영준 역) : '개발자 온보딩 가이드'에서 소개한 판인데 현재 품절이라 중고로만 구할 수 있다. [Yes24에서 원서](https://www.yes24.com/Product/Goods/74241463)가 같은 삽화가 들어간 판으로는 배송비 고려하면 가장 싸게 구할 수 있는 경로인듯하다.
+     - [글쓰기의 요소](https://play.google.com/store/books/details/%EC%9C%8C%EB%A6%AC%EC%97%84_%EC%8A%A4%ED%8A%B8%EB%A0%81%ED%81%AC_2%EC%84%B8_%EA%B8%80%EC%93%B0%EA%B8%B0%EC%9D%98_%EC%9A%94%EC%86%8C) (2016년 출판. 김영일 역, 전자책)
+    - [영어 글쓰기의 기본](https://www.yes24.com/Product/Goods/2746329) (2007년 출판, 조서연 공역) : 번역서와 원서가 한권으로 묶여서 나온 판이다. 현재도 구매 가능하다. 역자가 쓴 저서인 [영어 글쓰기의 기본 2
+      ](https://www.yes24.com/Product/Goods/4671236)도 있다.
+- [책][글쓰기 생각쓰기](https://www.yes24.com/Product/Goods/2774464)
+- [웹]폴 그레이엄(Paul Grahm)의 글쓰기에 대한 기고
+    - [How to Write Usefully](http://www.paulgraham.com/useful.html)
+    - [Write Like You Talk](http://www.paulgraham.com/talk.html)
 
 ### 11장 소프트웨어 수명주기를 고려한 진화하는 아키텍처 구현
 
