@@ -315,8 +315,7 @@ OKR 설명
 - [책]Elements of Style : 영어 글쓰기에 대한 유명한 책으로 번역판도 여러번 나왔다.
      - [글쓰기의 요소(삽화판)](https://product.kyobobook.co.kr/detail/S000001729444) (2016년 출판, 장영준 역) : '개발자 온보딩 가이드'에서 소개한 판인데 현재 품절이라 중고로만 구할 수 있다. [Yes24에서 원서](https://www.yes24.com/Product/Goods/74241463)가 같은 삽화가 들어간 판으로는 배송비 고려하면 가장 싸게 구할 수 있는 경로인듯하다.
      - [글쓰기의 요소](https://play.google.com/store/books/details/%EC%9C%8C%EB%A6%AC%EC%97%84_%EC%8A%A4%ED%8A%B8%EB%A0%81%ED%81%AC_2%EC%84%B8_%EA%B8%80%EC%93%B0%EA%B8%B0%EC%9D%98_%EC%9A%94%EC%86%8C) (2016년 출판. 김영일 역, 전자책)
-    - [영어 글쓰기의 기본](https://www.yes24.com/Product/Goods/2746329) (2007년 출판, 조서연 공역) : 번역서와 원서가 한권으로 묶여서 나온 판이다. 현재도 구매 가능하다. 역자가 쓴 저서인 [영어 글쓰기의 기본 2
-      ](https://www.yes24.com/Product/Goods/4671236)도 있다.
+    - [영어 글쓰기의 기본](https://www.yes24.com/Product/Goods/2746329) (2007년 출판, 조서연 공역) : 번역서와 원서가 한권으로 묶여서 나온 판이다. 현재도 구매 가능하다. 역자가 쓴 저서인 [영어 글쓰기의 기본 2](https://www.yes24.com/Product/Goods/4671236)도 있다.
 - [책][글쓰기 생각쓰기](https://www.yes24.com/Product/Goods/2774464)
 - [웹]폴 그레이엄(Paul Grahm)의 글쓰기에 대한 기고
     - [How to Write Usefully](http://www.paulgraham.com/useful.html)
