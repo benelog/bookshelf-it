@@ -82,18 +82,86 @@ https://www.yes24.com/Product/Goods/119108069
 ### p204
 > 기능 브랜치 기반 개발은 트렁크의 코드가 사용자에게 릴르스하기엔 너무 불안정해서 트렁크를 안정화시키는 동안 갭라자가 기능 개발을 수행할 수 없는 경우에 사용하는 방법이다. 고객이 각자 다른 버전의 소프트웨어를 사용하는 경우에 보편적으로 기능 브랜치 기반 개발 전략을 채택한다. 서비스 지향 시스템(service-oriented systems)은 일반적으로 트렁크 기반 개발 전략을 채택한다.
 >
-> 가장 보편적인 기능 브랜치 전략은 2010년 빈센트 드리센이 소개한 깃플로(Gitflow)라고 부르느 전략이다.
+> 가장 보편적인 기능 브랜치 전략은 2010년 빈센트 드리센이 소개한 깃플로(Gitflow)라고 부르는 전략이다.
 
+### p212
+
+> 버전 제어 시스템을 릴리스 리포지토리처럼 사용할 수는 있지만 원래 용도라고 보기 어렵다. 버전 제어 시스템에서는 검색이나 배포 관련 기능을 별로 제공하지 않는다. 대규모 배포를 위해 만들어진 시스템이 아니므로 그런 상황에서는 문제를 일으킬 수도 있다. 버전 제어 시스템 머신과 동일한 머신이 개발자 체아크웃, 도구로부터의 요청, 배포 요청을 모두 담당하면 프로덕션 배포에 영향을 미칠 수 있다.
+
+(의견) Node.js나 Go언어의 오픈소스 생태계에서는 GitHub.com을 릴리스 리포지토리처럼 쓰는 관행이 굳어졌다. 하지만 사내에서라면 이를 분리하는 것이 좋다는 저자의 의견에 동의한다. 버전 관리 시스템은 GitHub Enterprise를 쓰더라도 릴리스 저장소는 Nexus나 Artifactory를 쓰는 식이다. 분리하면 두 시스템을 각각 업그레이드하기에도 유리하다.
+
+### p213
+> 릴리스는 최대한 자주 수행하자. 릴리스 주기가 늘어지 거짓된 안정감을 심어줄 수 있다. 즉 릴리스 사이의 주지가 길면 변경사항을 테스트할 충분한 시간이 있는 것처럼 느껴지기 때문이다. 실제로 릴리스 주기를 짧게 가져가면 더 안정적인 소프트웨어를 구현할 수 있어 버그가 발견됐을 때 더 쉽게 처리할 수 있다. 매 주기마다 릴리스되는 변경사항의 수가 더 적으므로 각 릴리스의 위험도도 낮아진다.
+
+(의견) 공감한다. 1~2주에 한번 릴리스하는 조직과 한달에 한번 릴리스하는 조직을 비교했을 때 후자의 릴리스가 훨씬 힘겹고 위험한 일이되는 현상을 몇 번 목격했다. 테스트와 모니터링의 자동화 수준이 높아져야 릴리스의 비용이 적어져서 더 자주 릴리스하게 될 수 있기도하다.
+
+### p212
+
+> 배포를 원자적으로 만드는 가장 쉬운 방법은 기존에 설치된 소프트웨어를 덮어쓰는 것이 아니라 다른 경로에 소프트웨어를 설치하는 것이다. 일단 패키지가 설치된 다음에는 단축 아이콘이나 심볼릭 링크를 이용해 교체하면 된다.
+
+(의견) 많이 쓰던 기법이다. 사내 배포 시스템에서 디폴트로 제공이 되기도한다. 이동욱 님이 발표한 [우아한스프링배치 ](https://youtu.be/_nkJkWVH-mo?t=2452) 발표에서도 이 기법을 응용한 무중단 배포를 소개하고 있다. 배포된 최신 버전 파일로 심볼릭 링크를 교체하고 (`ln -s -f v2.jar app.jar`) readlink 명령어로 그 파일을 실행하는(`java -jar ${readlink ./app.jar`}) 이용하는 방식이다.
+
+### p218
+링크드인의 사례 '위키에 의한 배포'. 서비스 간의 배포 의존성이 있어서 릴리스 회의, 위키 페이지 배포 정보 정리, IRC 채팅을 통해 소통하고 새벽까지 배포가 진행되었음. 이후 서비스들을 독립적으로 배포 가능하도록 하여 배포 자동화 수준을 높힘.
+
+### p219
+> 한 번에 모조리 새 코드로 전환하는 일은 위험하다. 테스트를 아무리 많이 해도 버그 발생 가능성을 없앨 수는 없으며 한 번에 모든 사용자에게 코드를 롤아웃하면 모두가 동시에 문제를 겪을 수 있다. 따라서 변경 사항을 점진적으로 롤아웃하고 시스템 상태 지표를 모니터링 하는 편이 좋다.
+
+(의견) 규모가 있는 시스템을 개발/운영하는 개발자라면 절실하게 읽어야할 문장이다. 경험이 없는 사람에게는 그냥 당연한 말로 읽힐 듯도 하다.
+
+### p221 ~ p222
+기능 플래그(feature flag) 혹은 기능 토글(feature toggle)에 대한 설명
+
+> 데이터베이스 스키마 변경 같은 일부 변경 사항은 점진적으로 롤아웃할 수가 없으므로 특별히 더 주의해야 한다.
+
+> 또한 완전히 롤아웃됐거나 더 이상 사용하지 않는 기능 플래그는 반드시 정리하자. 기능 플래그 때문에 어지럽혀진 코드는 그 의미를 유추하기도 어려울 뿐더러 버그도 유발한다. 예를 들어 오랜 시간동안 켜져 있던 기능을 꺼버리면 재앙 수준의 문제가 발생하기도 한다. 기능 플래그를 정리하는 것도 후련이 필요하다. 나중에 플래그를 제거할 티켓을 미리 만들어두자.
+
+(의견) 이또한 절실하게 새겨두어야 할 문장이다.
+
+### p222 ~ p223
+카나리 배포와 블루그린 배포 개념 설명
+
+### p227
+Dark launching 소개
+
+* 마틴 파울러의 설명 : https://martinfowler.com/bliki/DarkLaunching.html
+* 신구 시스템 비교 오픈소스 Diffy : https://github.com/opendiffy/diffy
+
+### p233
+
+> 긴급대응을 맡은 온콜 개발자는 일정에 따라 교대로 역할을 맡는다. 교대 주기는 하루 정도로 짧을 수도 있지만 대부분 1~2주 정도가 보편적이다. 자격을 갖춘 개발자는 모두 이 교대 업무에 참여한다. 팀에 새로 합류했거나 필요한 스킬이 부족한 인력은 보통 몇 번 정도 온콜 업무에 주 담당자의 '보조(shadow)' 역할을 맡아 업무 요령을 배운다.
+
+### p238
+> 온콜 업무 동안 수행하는 일은 이슈 트래커나 팀의 온골 로그에 기록해야 한다. (중략) 질문과 장애를 고그에 기록해두면 추후에도 누구나 참고할 수 있는 검색 가능한 지식창고를 구축할 수 있다.
+>
+> 슬랙 같은 채팅 채널을 이용해 운영 장애와 지우너 업무를 소화하는 회사도 있다. 채팅은 의사소통에는 좋은 도구지만 나중에 찾아 읽기가 어려우므로 모든 사항을 티켓이나 문서로 요약해두자.
+
+### p250
+아틀란시안의 포스트모텀 문서 소개
+
+* 가이드 : https://www.atlassian.com/incident-management/handbook/postmortems
+* 템플릿: https://www.atlassian.com/incident-management/postmortem/templates
+     * 징후, 실수, 영향도, 인지, 대응 방안, 복구 방안, 시간별 대응 기록, 근본 원인, 장애를 통해 알게된 사항, 필요한 조치 사항 등
+
+> 포스트모텀 문서에서 가장 중요한 부분은 근본 원인 분석(root-cause analysis, RCA)절이다. 근본 원인 분석은 '어째서?'라는 질문을 5번 던져 수행한다. (중략) 여기서 5라는 숫자는 절대적인 것이 아니며, 대부분 5번 정도 반복해 생각하다 보면 근본 원인을 찾게 된다.
+
+### p255
+> 간혹 엔지니어 중에는 경험을 쌓을수록 반사적으로 '소방관' 역할을 맡는 이도 잇다. 소방관 역할에 뛰어난 엔지니어는 팀 에선물 같은 존재가 되기도 한다. 즉 상황에 어려워질 때마다 소방관에게 부탁하기만 하면 모든 문제가 해결된다고 팀원 누구나가 생각하는 것이다. 하지만 소방관에게 의지하는 것은 결코 좋은 징후가 아니다. 모든 이슈에 끊임없이 개입하게 되는 소방관은 결국 계속해서 온콜 업무를 수행하는 것이나 다름 없다. 이 시간이 길어지고 스트레스가 쌓이면 결국 번아웃에 이른다. 또한 소방관 엔지니어는 끊임없이 방해를 받기 떄문에 프로그래밍이나 설계 업무에도 어려움을 겪는다. 그리고 소방관에 의존하는 팀은 스스로 필요한 전문성이나 트러블슈팅 능력조차 키울 수 없다. 영웅 심리에 휩싸인 보방관은 항상 주변에 해결해야 할 일이 산적해 있으므로 중요한 기반 문제는 오히려 뒷전으로 제쳐둘 수도 있다.
+
+### p270
+> 문서화는 여러분이 모르는 것을 드러내는 방법이기도 하다.
+
+> 설계를 문서화하면 피드백을 요청하기도 쉬워진다.
 
 ## 추천자료
 이 책에서는 각 장의 끝무렵에 '레벨업을 위한 읽을 거리'로 해당 장에서 다룬 주제를 더 깊이 있게 학습하는데 도움이 되는 자료를 추천했다.
 
 ### 2장 역량을 높이는 의식적 노력
-- [프로그래머의 길, 멘토에게 묻다](https://www.yes24.com/Product/Goods/4045732)
-- [나는 왜 도와달라는 말을 못할까: 부담은 줄이고 성과는 높이는 부탁의 기술](https://www.yes24.com/Product/Goods/95735260)
+- [책][프로그래머의 길, 멘토에게 묻다](https://www.yes24.com/Product/Goods/4045732)
+- [책][나는 왜 도와달라는 말을 못할까: 부담은 줄이고 성과는 높이는 부탁의 기술](https://www.yes24.com/Product/Goods/95735260)
 - 짝 프로그래밍
-  - [익스트림 프로그래밍](https://www.yes24.com/Product/Goods/2126201)
-  - [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
+  - [책][익스트림 프로그래밍](https://www.yes24.com/Product/Goods/2126201)
+  - [웹][On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
 - 가면 증후군이나 더닝 크루거 효과
   - [자존감은 어떻게 시작되는가: 당신의 인생을 결정짓는 자세의 차이](https://www.yes24.com/Product/Goods/36962337)( [Google play 이북](https://play.google.com/store/books/details/%EC%97%90%EC%9D%B4%EB%AF%B8_%EC%BB%A4%EB%94%94_%EC%9E%90%EC%A1%B4%EA%B0%90%EC%9D%80_%EC%96%B4%EB%96%BB%EA%B2%8C_%EC%8B%9C%EC%9E%91%EB%90%98%EB%8A%94%EA%B0%80?id=IFcxDwAAQBAJ) )
 
@@ -112,22 +180,35 @@ https://www.yes24.com/Product/Goods/119108069
 
 ### 5장 피할 수 없는 코드 의존성의 관리: 복잡한 프로그램을 짜봐야 비로서 깨닫는 의존성이 진실
 
-- 시맨틱 버저닝 스펙 : https://semver.org/
-- [PEP 440 – Version Identification and Dependency Specification](https://peps.python.org/pep-0440/)
+- [웹][시맨틱 버저닝 스펙](https://semver.org/)
+- [웹][PEP 440 – Version Identification and Dependency Specification](https://peps.python.org/pep-0440/)
 
 ### 6장 테스트! 개발자의 든든한 지원군
-- [단위 테스트: 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.yes24.com/Product/Goods/104084175)
-- [테스트 주도 개발](https://www.yes24.com/Product/Goods/12246033)
-- [실용주의 프로그래머 ](https://www.yes24.com/Product/Goods/107077663) : 속성 기반 테스팅(Property based testing)절 살펴보기
-- [탐험적 테스팅: 배우고 통찰하며 개선하는 소프트웨어 테스트](https://www.yes24.com/Product/Goods/14829054)
+- [책][단위 테스트: 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.yes24.com/Product/Goods/104084175)
+- [책][테스트 주도 개발](https://www.yes24.com/Product/Goods/12246033)
+- [책][실용주의 프로그래머 ](https://www.yes24.com/Product/Goods/107077663) : 속성 기반 테스팅(Property based testing)절 살펴보기
+- [책][탐험적 테스팅: 배우고 통찰하며 개선하는 소프트웨어 테스트](https://www.yes24.com/Product/Goods/14829054)
 
 ### 7장 올바로 주고받는 코드 리뷰: 원만한 팀 협업과 높은 코드 품질을 목표로
-- [구글의 Code Review Developer Guide](https://google.github.io/eng-practices/review/)
-- [하버드 피드백의 기술: 밀어붙이는 피드백에서 끌어당기는 피드백으로](https://www.yes24.com/Product/Goods/14759898) ([Google play 이북](https://play.google.com/store/books/details/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%8A%A4%ED%86%A4_%EC%89%B4%EB%9D%BC_%ED%9E%8C_%ED%95%98%EB%B2%84%EB%93%9C_%ED%94%BC%EB%93%9C%EB%B0%B1%EC%9D%98_%EA%B8%B0%EC%88%A0?id=6RirBAAAQBAJ))
+- [웹][구글의 Code Review Developer Guide](https://google.github.io/eng-practices/review/)
+- [책][하버드 피드백의 기술: 밀어붙이는 피드백에서 끌어당기는 피드백으로](https://www.yes24.com/Product/Goods/14759898) ([Google play 이북](https://play.google.com/store/books/details/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%8A%A4%ED%86%A4_%EC%89%B4%EB%9D%BC_%ED%9E%8C_%ED%95%98%EB%B2%84%EB%93%9C_%ED%94%BC%EB%93%9C%EB%B0%B1%EC%9D%98_%EA%B8%B0%EC%88%A0?id=6RirBAAAQBAJ))
 
 ### 8장 고객 앞으로! 소프트웨어 전달: 마침내 프로덕션 환경에 안착시킬 소프트웨어의 종착지
+- [책][팀을 위한 Git: Git 워크플로우를 효율적으로 만드는 사용자 중심 접근법](https://www.yes24.com/Product/Goods/33057253) (Yes24 전자책)
+- [책][Continuous Delivery: 신뢰할 수 있는 소프트웨어 출시](https://www.yes24.com/Product/Goods/11406822)
+     - 번역판 초판에는 이 책 제목이 '신뢰할 수 있는 소프트웨어 출시' 였으나 중쇄를 하면서 원서와 동일하게 제목이 바뀌었다고 함.([박성철 님의 관련 댓글](https://www.facebook.com/fupfin.geek/posts/pfbid02ksHoMdnvhkJkN9xWS4qQimt541smxX3oscttadaYVMHLxtQ6CZtkKsHEw82LjXs3l?comment_id=328411842995894)) '개발자 온보딩 가이드'에서는 번역판 초판의 제목으로 표기되어 있어 있음.
+- [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286) : 8장에 릴리스 엔지니어링 참조
+- [웹][Amazon Builders' Library](https://aws.amazon.com/ko/builders-library/)
+- [책][Release it: 성공적인 출시를 위한 소프트웨어 설계와 배치](https://www.yes24.com/Product/Goods/2753365) (2007년 출판)
+    - 원서는 2018년에 2판까지 나왔음. [Amazon](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395/)
+    - 2판의 번역서도 현재 한빛미디에서 준비 중에 있다고 함.
 
 ### 9장 긴급대응 온콜 업무
+
+- [웹][What happens when the pager goes off?](https://increment.com/on-call/when-the-pager-goes-off/) : 책에서 발췌한 장애 대응 5단계
+- [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
+    - 4장: SLI, SLO를 직접 정의해야할 때 참조
+    - 11장, 13장, 14장, 15장 : 온콜, 비상 대기, 장애 처리, 포스트터모텀
 
 ### 10장 견고한 소프트웨어를 위한 기술 설계 절차
 
