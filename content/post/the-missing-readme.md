@@ -8,10 +8,15 @@ date: 2023-10-01
 
 https://www.yes24.com/Product/Goods/119108069
 
-제목은
+책의 제목
 
 - (원서) The Missing Readme: A Guide for the New Software Engineer
 - (번역서) 필독! 개발자 온보딩 가이드: 지속 가능한 소프트웨어와 원활한 협업 문화를 이해하는 프로페셔널 개발자의 탄생
+
+
+## 관련 자료
+* 저자들이 출연한 파드캐스트 : https://www.youtube.com/watch?v=7qQQMtVj-Cw
+* 번역서 정오표 : https://www.onlybook.co.kr/entry/onboarding-errata
 
 ## 인상 깊은 단락
 
@@ -82,6 +87,21 @@ https://www.yes24.com/Product/Goods/119108069
 >
 > 가장 보편적인 기능 브랜치 전략은 2010년 빈센트 드리센이 소개한 깃플로(Gitflow)라고 부르는 전략이다.
 
+(의견) Git-flow는 필요에 따라 팀 브랜치 정책의 종착역은 될수 있지만 시작점으로 권장하고 싶지는 않다. 자세한 의견은 [Git-Flow에 대해서 다시 생각해보기](https://blog.benelog.net/rethink-about-git-flow)라는 글로 따로 정리했다.
+
+### p205
+> 사실 빈센트 드리센은 지속적인 통합 및 전달이 가능한 소프트웨어에서도 깃플로를 사용할 수 있도록 원래 작성했던 깃플로 블로그 게시글을 수정했다.
+
+(의견) 오역이라고 생각한다. 원서에는 아래와 같이 되어 있다.
+
+> In fact, Driesen has amended his original Gitflow blog post to discourage Gitflow use for software that can be continuously integrated and delivered.
+
+파파고 번역으로는 다음과 같다.
+
+> 실제로 Drysen은 지속적으로 통합되어 제공될 수 있는 소프트웨어에 대한 Gitflow 사용을 막기 위해 자신의 원래 Gitflow 블로그 게시물을 수정했습니다.
+
+원서에도 위의 문장에서 'Driessen'의 이름에서 s를 하나 빠뜨린 오타가 있다.
+
 ### p212
 
 > 버전 제어 시스템을 릴리스 리포지토리처럼 사용할 수는 있지만 원래 용도라고 보기 어렵다. 버전 제어 시스템에서는 검색이나 배포 관련 기능을 별로 제공하지 않는다. 대규모 배포를 위해 만들어진 시스템이 아니므로 그런 상황에서는 문제를 일으킬 수도 있다. 버전 제어 시스템 머신과 동일한 머신이 개발자 체아크웃, 도구로부터의 요청, 배포 요청을 모두 담당하면 프로덕션 배포에 영향을 미칠 수 있다.
@@ -151,30 +171,95 @@ Dark launching 소개
 
 > 설계를 문서화하면 피드백을 요청하기도 쉬워진다.
 
+### p311
+데이터베이스 스키마 마이그레이션 도구인 Liquibase 등을 소개함.
+
+> 데이터베이스와 애플리케이션 수명주기를 결합해서는 안 된다. 애플리케이션 배포 과정에서 스키마를 마이그레이션하는 것은 위험하다.
+
+(의견 + 경험 공유) 의도한 바은 아니지만 JPA의 스키마 관리 기능이 운영환경에서 실행되어서 발생하는 장애를 종종 전해듣는다. 스프링부트의 `spring.jpa.hibernate.ddl-auto` 같은 옵션도 Local PC에 DB가 따로 설치되어 있거나 Embeded DB를 쓸때만 활성화해야 한다고 생각한다. 공용 개발 DB에서부터는 Liquibase와 같은 스키마 관리 도구를 활용하는 것이 좋다. 공용 개발 DB라도 여러 개가 있는 것이 다양한 테스트를 하는데 유리하고, 개발 DB가 여러개가 되면 스키마 관리 도구의 필요성이 높아진다. Oracle 등 개발자가 여러 인스턴스를 설치하는데 제약이 있는 DB를 오랫동안 써 온 개발자는  이런 도구의 필요성을 느끼거나 적용할 수 있는 기회를 얻기가 어려울 수도 있다.
+
+운영DB는 DBA가 따로 SQL파일을 실행해서 스키마를 반영하는 회사라도 Liquibase는 충분히 가능하다.
+Liquibase는 오프라인 지원 기능이 있어서 실제DB에 스키마 변경을 실행하지 않고 DDL을 파일로 뽑아낼수도 있다.
+예를 들어 스키마 버전 1.0.0-RC1과 1.0.0-RC2 버전 사이에 변경된 컬럼을 반영하는 DDL을 담은 .sql파일을 뽑을 때는 아래 명령어로 가능하다.
+
+```
+rm target/release.csv
+mvn liquibase:updateSQL -Dliquibase.url='offline:mysql?changeLogFile=target/release.csv' -Dliquibase.toTag=1.0.0-RC1
+mvn liquibase:updateSQL -Dliquibase.url='offline:mysql?changeLogFile=target/release.csv' -Dliquibase.toTag=1.0.0-RC2
+```
+
+### p319
+> 아이러니하게도 애자일 방법론이 보편화되면서 일부 조직에서 애자일 전문가, 자격증, 개발방법론 컨설턴트 등이 넘쳐났다. 사람들이 '애자일을 수행'하는 '올바른' 방법에 집착하다보니 '절차와 도구보다는 각 개인 그리고 서로 간의 상호작용'이라는 가장 첫 번째 원칙이 훼손되는 현상도 나타났다.
+
+### p321
+> 칸반은 장기적 프로젝트가 아니라 여기저기서 쇄도하는 요청을 즉시 처리한는 지원 엔지니어나 사이트 신뢰성 엔지니어링 같은 팀에 적합하다.
+
+### p332
+중장기 계획을 위한 로드맵 수립
+
+> 로드맵을 통해 모든 사람은 팀이 만들고 있는 것에 대한 장기적인 비전을 생각해보게 된다. (중략) 아직 한참 남은 분기는 조금 덜 구체적이어도 괜찮지만, 곧 다가올 분기는 최대한 정확해야 한다.
+
+### p338
+엔지니어링 매니저의 역할 설명
+
+> 엔지니어링 관리자인 팀장은 직원을 보살피고 제품과 절차도 관리하며, 팀을 구축하고 엔지니어를 코칭하고 성장을 도우며 원활한 대인관계를 유지할 수 있도록 관리한다.
+
+### p343
+
+> 이미 친분관계가 형성됐다고 해서 일대일 회의를 대신할 수는 없다. 일대일 회의를 열 수 없을 정도로 바쁜 팀장이라면 관리자로서 자격이 없을지도 모른다.
+
+### p344
+PPP 회의 소개. 진척사항(Progess), 계획(Plan), 문제(Problem)
+
+### p346
+OKR 설명
+
+> 핵심 결과를 할일 목록처럼 활용해서는 안 된다. 핵심 결과는 어떤 일을 어떻게 '할 것'인지가 아니라 어떤 일이 완료됐음을 어떻게 '판단할지'에 대한 것이어야 한다. 목표를 이루는 방법은 수없이 많으며 OKR 때문에 특정 계획에 갇혀서는 안 된다.
+
+### p362
+시니어 엔지니어의 역할
+
+> 주니어 엔지니어는 기능을 구현하고 태스크를 완료하는 반면 시니어 엔지니어는 불확실성과 모호성을 주로 다룬다.
+
+### p369
+
+> 시니어 엔지니어는 과거 경험을 활용해 의사결정을 내린다. 이직을 자주 하면 여러분의 결정이 장기적으로 어떻게 작용하는지 확인할 길이 없어 시니어 엔지니어로서 필요한 직관을 늘리는 데 방해가 된다.
+
+### p371
+
+> '수면이 개발 성과에 미치는 영향에 대한 연구(Need for Sleep: The Impact of a Night of Sleep Deprivation on Novice Developers' Peformance)(IEEE Transactions on Software Engineering, 2020)에 따르면 '하룻밤 수면 부족으로 인해 품질은 50%나 감소한다'.
+
+해당 논문은 https://arxiv.org/pdf/1805.02544.pdf 에서 볼 수 있다.
+
 ## 추천자료
 이 책에서는 각 장의 끝무렵에 '레벨업을 위한 읽을 거리'로 해당 장에서 다룬 주제를 더 깊이 있게 학습하는데 도움이 되는 자료를 추천했다.
+
+여러 번 언급되는 구글의 SRE 관련 책들은 https://sre.google/books/ 에서 무료로 열람도 가능하다.
+
 
 ### 2장 역량을 높이는 의식적 노력
 - [책][프로그래머의 길, 멘토에게 묻다](https://www.yes24.com/Product/Goods/4045732)
 - [책][나는 왜 도와달라는 말을 못할까: 부담은 줄이고 성과는 높이는 부탁의 기술](https://www.yes24.com/Product/Goods/95735260)
 - 짝 프로그래밍
-  - [책][익스트림 프로그래밍](https://www.yes24.com/Product/Goods/2126201)
-  - [웹][On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
-- 가면 증후군이나 더닝 크루거 효과
-  - [자존감은 어떻게 시작되는가: 당신의 인생을 결정짓는 자세의 차이](https://www.yes24.com/Product/Goods/36962337)( [Google play 이북](https://play.google.com/store/books/details/%EC%97%90%EC%9D%B4%EB%AF%B8_%EC%BB%A4%EB%94%94_%EC%9E%90%EC%A1%B4%EA%B0%90%EC%9D%80_%EC%96%B4%EB%96%BB%EA%B2%8C_%EC%8B%9C%EC%9E%91%EB%90%98%EB%8A%94%EA%B0%80?id=IFcxDwAAQBAJ) )
+    - [책][익스트림 프로그래밍](https://www.yes24.com/Product/Goods/2126201)
+    - [웹][On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
+- 가면 증후군이나 더닝 크루거 효과에 대한 참고자료
+    - [책]자존감은 어떻게 시작되는가: 당신의 인생을 결정짓는 자세의 차이
+        - [종이책](https://www.yes24.com/Product/Goods/36962337)
+        - [전자책](https://play.google.com/store/books/details/%EC%97%90%EC%9D%B4%EB%AF%B8_%EC%BB%A4%EB%94%94_%EC%9E%90%EC%A1%B4%EA%B0%90%EC%9D%80_%EC%96%B4%EB%96%BB%EA%B2%8C_%EC%8B%9C%EC%9E%91%EB%90%98%EB%8A%94%EA%B0%80?id=IFcxDwAAQBAJ)
 
 ### 3장 코드와 함께 춤을: 레거시 코드에 임하는 우리의 자세
-- [레거시 코드 활용 전략: 손대기 두려운 낡은 코드, 안전한 변경과 테스트 기법](https://www.yes24.com/Product/Goods/64586851)
-- [The Legacy Code Programmer's Toolbox: Practical Skills for Software Professionals Working with Legacy Code](https://www.amazon.com/Legacy-Code-Programmers-Toolbox-Professionals/dp/1691064130)
-- [리팩터링 2판: 코드 구조를 체계적으로 개선하여 효율적인 리팩터링 구현하기 ](https://www.yes24.com/Product/Goods/89649360)
-- [맨먼스 미신](https://www.yes24.com/Product/Goods/16928943)
+- [책][레거시 코드 활용 전략: 손대기 두려운 낡은 코드, 안전한 변경과 테스트 기법](https://www.yes24.com/Product/Goods/64586851)
+- [책][The Legacy Code Programmer's Toolbox: Practical Skills for Software Professionals Working with Legacy Code](https://www.amazon.com/Legacy-Code-Programmers-Toolbox-Professionals/dp/1691064130)
+- [책][리팩터링 2판: 코드 구조를 체계적으로 개선하여 효율적인 리팩터링 구현하기 ](https://www.yes24.com/Product/Goods/89649360)
+- [책][맨먼스 미신](https://www.yes24.com/Product/Goods/16928943)
 
 ### 4장 운영 환경을 고려한 코드 작성: 개발환경과 프로덕션 환경은 엄연히 다르다.
-- [Code Complete 코드 컴플리트 2: 더 나은 소프트웨어 구현을 위한 실무 지침서](https://www.yes24.com/Product/Goods/44130507) : 8장에서 방어적 프로그래밍에 대해서 다룸.
-- [Clean Code: 소프트웨어 장인 정신](https://www.yes24.com/Product/Goods/11681152) : 7장과 8장에서 예외처리와 경계에 대해서 다룸
-- [The Amazon Builders' Library](https://aws.amazon.com/builders-library/)
-- [SRE를 위한 시스템 설계와 구축: 구글이 공개하는 SRE 모범 사례와 설계, 구현, 운영 노하우](https://www.yes24.com/Product/Goods/105804670)
-- [사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
+- [책][Code Complete 코드 컴플리트 2: 더 나은 소프트웨어 구현을 위한 실무 지침서](https://www.yes24.com/Product/Goods/44130507) : 8장에서 방어적 프로그래밍에 대해서 다룸.
+- [책][Clean Code: 소프트웨어 장인 정신](https://www.yes24.com/Product/Goods/11681152) : 7장과 8장에서 예외처리와 경계에 대해서 다룸
+- [웹][The Amazon Builders' Library](https://aws.amazon.com/builders-library/)
+- [책][SRE를 위한 시스템 설계와 구축: 구글이 공개하는 SRE 모범 사례와 설계, 구현, 운영 노하우](https://www.yes24.com/Product/Goods/105804670)
+- [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
 
 ### 5장 피할 수 없는 코드 의존성의 관리: 복잡한 프로그램을 짜봐야 비로서 깨닫는 의존성이 진실
 
@@ -227,9 +312,29 @@ Dark launching 소개
     - [Write Like You Talk](http://www.paulgraham.com/talk.html)
 
 ### 11장 소프트웨어 수명주기를 고려한 진화하는 아키텍처 구현
+- [책]진화적 아키텍처: 피트니스 함수, 거버넌스 자동화를 활용해 생산성 높은 소프트웨어 구축하기
+    - [종이책](https://www.yes24.com/Product/Goods/121961003)
+    - [전자책](https://play.google.com/store/books/details/%EB%8B%90_%ED%8F%AC%EB%93%9C_%EC%A7%84%ED%99%94%EC%A0%81_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98?id=6w_UEAAAQBAJ)
+    - '필독! 개발자 온보딩 가이드' 본문에서는 원서가 소개되어 있는데, 2023년 8월에 번역판이 출판되었다.
+- [책][도메인 주도 설계 구현: Implementing Domain-Driven Design](https://www.yes24.com/Product/Goods/25100510)
+- [책][A Philosophy of Software Design, 2ED](https://www.amazon.com/Philosophy-Software-Design-2nd-ebook/dp/B09B8LFKQL/)
+- [책][Elements of Clojure](https://www.amazon.com/Elements-Clojure-Zachary-Tellman/dp/0359360580/)
+- [동영상]["Simple Made Easy" - Rich Hickey (2011)](https://www.youtube.com/watch?v=SxdOUGdseq4) : 간결성, 복잡성, 손쉬움, 좋은 소프트웨어를 구현하는 방법에 대해서 설명
+- [책][Data Mesh](https://www.amazon.com/Data-Mesh-Zhamak-Dehghani-ebook/dp/B09V4KWWJ8/)
+- [책][데이터 중심 애플리케이션 설계: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 시스템을 지탱하는 핵심 아이디어](https://www.yes24.com/Product/Goods/595ref=sr_1_1?crid=3UIMYGOHHDTLL&keywords=data+mesh&qid=1698069866&sprefix=data+me%2Caps%2C261&sr=8-166585)
+
 
 ### 12장 효율적인 협업을 위한 애자일 문화
+- [웹][Principles behind the Agile Manifesto](https://agilemanifesto.org/principles.html)
+- [웹][Atlassian의 애자일 문서](https://www.atlassian.com/agile)
 
 ### 13장 관리자, 팀장, 상사와 함께 일하기
-
-### 14장 경력 관리에 대한 조언
+- [책]개발 7년차, 매니저 1일차: 개발만 해왔던 내가, 어느 날 갑자기 ‘팀’을 맡았다!
+    - [종이책](https://www.yes24.com/Product/Goods/87336637)
+    - [전자책](https://play.google.com/store/books/details/%EC%B9%B4%EB%AF%B8%EC%9C%A0_%ED%91%B8%EB%A5%B4%EB%8B%88%EC%97%90_%EA%B0%9C%EB%B0%9C_7%EB%85%84%EC%B0%A8_%EB%A7%A4%EB%8B%88%EC%A0%80_1%EC%9D%BC%EC%B0%A8?id=Qbf_DwAAQBAJ)
+- [책][An Elegant Puzzle: Systems of Engineering Management](https://www.amazon.com/Elegant-Puzzle-Systems-Engineering-Management-ebook/dp/B07QYCHJ7V/)
+- [책]일의 99%는 피드백이다: 하버드 협상연구소에서 알려주는 대화의 기술
+    - [종이책](https://www.yes24.com/Product/Goods/102003851)
+    - [전자책](https://play.google.com/store/books/details/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%8A%A4%ED%86%A4_%EC%89%B4%EB%9D%BC_%ED%9E%8C_%EC%9D%BC%EC%9D%98_99_%EB%8A%94_%ED%94%BC%EB%93%9C%EB%B0%B1%EC%9D%B4%EB%8B%A4?id=UccyEAAAQBAJ)
+- [책][Managing Up: How to Move up, Win at Work, and Succeed with Any Type of Boss](https://www.amazon.com/Managing-Up-Move-Work-Succeed-ebook/dp/B07BB4QFDF/) : 상사나 관리자의 개성을 어떻게 고려해야하는지, 엄격한 관리자에 대응하는 법, 이직하는 방법 등을 다룸.
+- [책][하이 아웃풋 매니지먼트: 어떻게 성과를 높일 것인가](https://www.yes24.com/Product/Goods/61333181)
