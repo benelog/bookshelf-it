@@ -26,8 +26,8 @@ https://www.yes24.com/Product/Goods/119108069
 유용하다고 느낀 지침과 조언을 새겨두고 실천하기 위해 여러 번 읽어야겠다는 생각을 하면서 마지막 장을 덮었습니다.
 
 ## 관련 자료
-* 저자들이 출연한 파드캐스트 : https://www.youtube.com/watch?v=7qQQMtVj-Cw
 * 번역서 정오표 : https://www.onlybook.co.kr/entry/onboarding-errata
+* 저자들이 출연한 파드캐스트 : https://www.youtube.com/watch?v=7qQQMtVj-Cw
 
 ## 인상 깊은 단락
 
@@ -103,19 +103,20 @@ https://www.yes24.com/Product/Goods/119108069
 ### p205
 > 사실 빈센트 드리센은 지속적인 통합 및 전달이 가능한 소프트웨어에서도 깃플로를 사용할 수 있도록 원래 작성했던 깃플로 블로그 게시글을 수정했다.
 
-(의견) 오역이라고 생각한다. 원서에는 아래와 같이 되어 있다.
+(의견) 번역서 초판에 있는 오역이다. 출판사에 제보해서 [정오표](https://www.onlybook.co.kr/entry/onboarding-errata)에도 반영되었다.
+
+원서에는 아래와 같이 되어 있다.
 
 > In fact, Driesen has amended his original Gitflow blog post to discourage Gitflow use for software that can be continuously integrated and delivered.
 (참고로 원서에도 '드리센'의 이름을 'Driessen'에서 s를 하나 빼고 쓴 오타가 있다.)
 
-이 문구는 아래와 같이 번역되어야 한다고 생각한다.
+정오표에는 다음과 같이 고쳐졌다.
 
-> 실제로 드리센은 지속적으로 통합되어 제공될 수 있는 소프트웨어에 대한 Gitflow 사용을 권장하지 않는다고 자신의 원래 Gitflow 블로그 게시물을 수정했습니다.
+> 실제로 드리센은 지속적으로 통합되어 제공될 수 있는 소프트웨어에 대한 Gitflow 사용을 추천하지 않는다고 자신의 원래 Gitflow 블로그 게시물을 수정했습니다.
 
 드리센은 2010년에 썼던 Git-Flow를 소개한 원래의 블로그 글(https://nvie.com/posts/a-successful-git-branching-model/)을 2020년에 서두에 10년만에 회고를 덧붙었다. 그 회고에서 아래와 같이 언급했다.
 
 > If your team is doing continuous delivery of software, I would suggest to adopt a much simpler workflow (like GitHub flow) instead of trying to shoehorn git-flow into your team.
-
 
 ### p212
 
