@@ -62,7 +62,7 @@ https://www.yes24.com/Product/Goods/119108069
 ### p102
 > 예외는 일찍 던지고 최대한 나중에 처리하자.
 
-(의견) 최대한 나중에 처리하는 것보다는 적절한 추상화 레이어에서 처리하자는 것이 좋다고 생각한다. 예를 들면 사용자의 ID로 조회했을 때 DB 조회가 실패했을 때 생기는 `EmptyResultDataAccessException`을 어플리케이션 콜스택의 마지막에서 처리하기보다는 비지니스 로직을 다루는 로직에서 `UserNotFoundException`과 같이 비지니스 맥락의 의미가 부여된 예외로 바꾸는 것이 좋을 때도 있다.
+(의견) 최대한 나중에 처리하는 것보다는 적절한 추상화 레이어에서 처리하자는 것이 좋다고 생각한다. 예를 들면 사용자의 ID로 조회했을 때 DB 조회가 실패했을 때 생기는 `EmptyResultDataAccessException`을 어플리케이션 콜스택의 마지막에서 처리하기보다는 비지니스 로직을 다루는 레이어에서 `UserNotFoundException`과 같이 비지니스 맥락의 의미가 부여된 예외로 바꾸는 것이 좋을 때도 있다.
 
 ### p115
 > 카운터, 게이지, 히스토그램을 쉽게 계산할 수 있다고 해서 지표 라이브러리를 직접 구현할 생각은 금물이다. 비표준 라이브러리의 유지보수는 악몽에 가깝다. 표준 라이브러리는 애초에 모든 것과 통합할 수 있도록 만들어져 있다.
@@ -252,104 +252,103 @@ OKR 설명
 
 여러 번 언급되는 구글의 SRE 관련 책들은 https://sre.google/books/ 에서 무료로 열람도 가능하다.
 
-
 ### 2장 역량을 높이는 의식적 노력
-- [책][프로그래머의 길, 멘토에게 묻다](https://www.yes24.com/Product/Goods/4045732)
-- [책][나는 왜 도와달라는 말을 못할까: 부담은 줄이고 성과는 높이는 부탁의 기술](https://www.yes24.com/Product/Goods/95735260)
+- (책)[프로그래머의 길, 멘토에게 묻다](https://www.yes24.com/Product/Goods/4045732)
+- (책)[나는 왜 도와달라는 말을 못할까: 부담은 줄이고 성과는 높이는 부탁의 기술](https://www.yes24.com/Product/Goods/95735260)
 - 짝 프로그래밍
-    - [책][익스트림 프로그래밍](https://www.yes24.com/Product/Goods/2126201)
-    - [웹][On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
+    - (책)[익스트림 프로그래밍](https://www.yes24.com/Product/Goods/2126201)
+    - (웹)[On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
 - 가면 증후군이나 더닝 크루거 효과에 대한 참고자료
-    - [책]자존감은 어떻게 시작되는가: 당신의 인생을 결정짓는 자세의 차이
+    - (책)자존감은 어떻게 시작되는가: 당신의 인생을 결정짓는 자세의 차이
         - [종이책](https://www.yes24.com/Product/Goods/36962337)
         - [전자책](https://play.google.com/store/books/details/%EC%97%90%EC%9D%B4%EB%AF%B8_%EC%BB%A4%EB%94%94_%EC%9E%90%EC%A1%B4%EA%B0%90%EC%9D%80_%EC%96%B4%EB%96%BB%EA%B2%8C_%EC%8B%9C%EC%9E%91%EB%90%98%EB%8A%94%EA%B0%80?id=IFcxDwAAQBAJ)
 
 ### 3장 코드와 함께 춤을: 레거시 코드에 임하는 우리의 자세
-- [책][레거시 코드 활용 전략: 손대기 두려운 낡은 코드, 안전한 변경과 테스트 기법](https://www.yes24.com/Product/Goods/64586851)
-- [책][The Legacy Code Programmer's Toolbox: Practical Skills for Software Professionals Working with Legacy Code](https://www.amazon.com/Legacy-Code-Programmers-Toolbox-Professionals/dp/1691064130)
-- [책][리팩터링 2판: 코드 구조를 체계적으로 개선하여 효율적인 리팩터링 구현하기 ](https://www.yes24.com/Product/Goods/89649360)
-- [책][맨먼스 미신](https://www.yes24.com/Product/Goods/16928943)
+- (책)[레거시 코드 활용 전략: 손대기 두려운 낡은 코드, 안전한 변경과 테스트 기법](https://www.yes24.com/Product/Goods/64586851)
+- (책)[The Legacy Code Programmer's Toolbox: Practical Skills for Software Professionals Working with Legacy Code](https://www.amazon.com/Legacy-Code-Programmers-Toolbox-Professionals/dp/1691064130)
+- (책)[리팩터링 2판: 코드 구조를 체계적으로 개선하여 효율적인 리팩터링 구현하기 ](https://www.yes24.com/Product/Goods/89649360)
+- (책)[맨먼스 미신](https://www.yes24.com/Product/Goods/16928943)
 
 ### 4장 운영 환경을 고려한 코드 작성: 개발환경과 프로덕션 환경은 엄연히 다르다.
-- [책][Code Complete 코드 컴플리트 2: 더 나은 소프트웨어 구현을 위한 실무 지침서](https://www.yes24.com/Product/Goods/44130507) : 8장에서 방어적 프로그래밍에 대해서 다룸.
-- [책][Clean Code: 소프트웨어 장인 정신](https://www.yes24.com/Product/Goods/11681152) : 7장과 8장에서 예외처리와 경계에 대해서 다룸
-- [웹][The Amazon Builders' Library](https://aws.amazon.com/builders-library/)
-- [책][SRE를 위한 시스템 설계와 구축: 구글이 공개하는 SRE 모범 사례와 설계, 구현, 운영 노하우](https://www.yes24.com/Product/Goods/105804670)
-- [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
+- (책)[Code Complete 코드 컴플리트 2: 더 나은 소프트웨어 구현을 위한 실무 지침서](https://www.yes24.com/Product/Goods/44130507) : 8장에서 방어적 프로그래밍에 대해서 다룸.
+- (책)[Clean Code: 소프트웨어 장인 정신](https://www.yes24.com/Product/Goods/11681152) : 7장과 8장에서 예외처리와 경계에 대해서 다룸
+- (웹)[The Amazon Builders' Library](https://aws.amazon.com/builders-library/)
+- (책)[SRE를 위한 시스템 설계와 구축: 구글이 공개하는 SRE 모범 사례와 설계, 구현, 운영 노하우](https://www.yes24.com/Product/Goods/105804670)
+- (책)[사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
 
 ### 5장 피할 수 없는 코드 의존성의 관리: 복잡한 프로그램을 짜봐야 비로서 깨닫는 의존성이 진실
 
-- [웹][시맨틱 버저닝 스펙](https://semver.org/)
-- [웹][PEP 440 – Version Identification and Dependency Specification](https://peps.python.org/pep-0440/)
+- (웹)[시맨틱 버저닝 스펙](https://semver.org/)
+- (웹)[PEP 440 – Version Identification and Dependency Specification](https://peps.python.org/pep-0440/)
 
 ### 6장 테스트! 개발자의 든든한 지원군
-- [책][단위 테스트: 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.yes24.com/Product/Goods/104084175)
-- [책][테스트 주도 개발](https://www.yes24.com/Product/Goods/12246033)
-- [책][실용주의 프로그래머 ](https://www.yes24.com/Product/Goods/107077663) : 속성 기반 테스팅(Property based testing)절 살펴보기
-- [책][탐험적 테스팅: 배우고 통찰하며 개선하는 소프트웨어 테스트](https://www.yes24.com/Product/Goods/14829054)
+- (책)[단위 테스트: 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.yes24.com/Product/Goods/104084175)
+- (책)[테스트 주도 개발](https://www.yes24.com/Product/Goods/12246033)
+- (책)[실용주의 프로그래머 ](https://www.yes24.com/Product/Goods/107077663) : 속성 기반 테스팅(Property based testing)절 살펴보기
+- (책)[탐험적 테스팅: 배우고 통찰하며 개선하는 소프트웨어 테스트](https://www.yes24.com/Product/Goods/14829054)
 
 ### 7장 올바로 주고받는 코드 리뷰: 원만한 팀 협업과 높은 코드 품질을 목표로
-- [웹][구글의 Code Review Developer Guide](https://google.github.io/eng-practices/review/)
-- [책][하버드 피드백의 기술: 밀어붙이는 피드백에서 끌어당기는 피드백으로](https://www.yes24.com/Product/Goods/14759898) ([Google play 이북](https://play.google.com/store/books/details/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%8A%A4%ED%86%A4_%EC%89%B4%EB%9D%BC_%ED%9E%8C_%ED%95%98%EB%B2%84%EB%93%9C_%ED%94%BC%EB%93%9C%EB%B0%B1%EC%9D%98_%EA%B8%B0%EC%88%A0?id=6RirBAAAQBAJ))
+- (웹)[구글의 Code Review Developer Guide](https://google.github.io/eng-practices/review/)
+- (책)[하버드 피드백의 기술: 밀어붙이는 피드백에서 끌어당기는 피드백으로](https://www.yes24.com/Product/Goods/14759898) ([Google play 이북](https://play.google.com/store/books/details/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%8A%A4%ED%86%A4_%EC%89%B4%EB%9D%BC_%ED%9E%8C_%ED%95%98%EB%B2%84%EB%93%9C_%ED%94%BC%EB%93%9C%EB%B0%B1%EC%9D%98_%EA%B8%B0%EC%88%A0?id=6RirBAAAQBAJ))
 
 ### 8장 고객 앞으로! 소프트웨어 전달: 마침내 프로덕션 환경에 안착시킬 소프트웨어의 종착지
-- [책][팀을 위한 Git: Git 워크플로우를 효율적으로 만드는 사용자 중심 접근법](https://www.yes24.com/Product/Goods/33057253) (Yes24 전자책)
-- [책][Continuous Delivery: 신뢰할 수 있는 소프트웨어 출시](https://www.yes24.com/Product/Goods/11406822)
+- (책)[팀을 위한 Git: Git 워크플로우를 효율적으로 만드는 사용자 중심 접근법](https://www.yes24.com/Product/Goods/33057253) (Yes24 전자책)
+- (책)[Continuous Delivery: 신뢰할 수 있는 소프트웨어 출시](https://www.yes24.com/Product/Goods/11406822)
      - 번역판 초판에는 이 책 제목이 '신뢰할 수 있는 소프트웨어 출시' 였으나 중쇄를 하면서 원서와 동일하게 제목이 바뀌었다고 함.([박성철 님의 관련 댓글](https://www.facebook.com/fupfin.geek/posts/pfbid02ksHoMdnvhkJkN9xWS4qQimt541smxX3oscttadaYVMHLxtQ6CZtkKsHEw82LjXs3l?comment_id=328411842995894)) '개발자 온보딩 가이드'에서는 번역판 초판의 제목으로 표기되어 있어 있음.
-- [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286) : 8장에 릴리스 엔지니어링 참조
-- [웹][Amazon Builders' Library](https://aws.amazon.com/ko/builders-library/)
-- [책][Release의 모든 것 - 대규모 웹 분산 시스템을 위한 운영 고려 설계](https://smartstore.naver.com/yes24book/products/9565539174) (번역서 2판. 2023년 11월 출간)
+- (책)[사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286) : 8장에 릴리스 엔지니어링 참조
+- (웹)[Amazon Builders' Library](https://aws.amazon.com/ko/builders-library/)
+- (책)[Release의 모든 것 - 대규모 웹 분산 시스템을 위한 운영 고려 설계](https://smartstore.naver.com/yes24book/products/9565539174) (번역서 2판. 2023년 11월 출간)
     - 번역서 1판 : [Release it: 성공적인 출시를 위한 소프트웨어 설계와 배치](https://www.yes24.com/Product/Goods/2753365) (2007년 출판)
     - 원서 2판 : [Release It!: Design and Deploy Production-Ready Software](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395/)(2018년 출간)
     - 2판의 번역서도 현재 한빛미디에서 준비 중에 있다고 함.
 
 ### 9장 긴급대응 온콜 업무
 
-- [웹][What happens when the pager goes off?](https://increment.com/on-call/when-the-pager-goes-off/) : 책에서 발췌한 장애 대응 5단계
-- [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
+- (웹)[What happens when the pager goes off?](https://increment.com/on-call/when-the-pager-goes-off/) : 책에서 발췌한 장애 대응 5단계
+- (책)[사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286)
     - 4장: SLI, SLO를 직접 정의해야할 때 참조
     - 11장, 13장, 14장, 15장 : 온콜, 비상 대기, 장애 처리, 포스트터모텀
 
 ### 10장 견고한 소프트웨어를 위한 기술 설계 절차
 - [동영상][Hammock Driven Development - Rich Hickey](https://www.youtube.com/watch?v=f84n5oFoZBc) : 복잡한 소프트웨어 설계 과정을 가장 잘 설명한 자료라고 소개됨.
-- [웹]대규모 오픈소스 프로젝트의 설계 과정
+- (웹)대규모 오픈소스 프로젝트의 설계 과정
     - [파이썬 개선 제안(PEP)](https://github.com/python/peps)
     - [카프카 개선 제안(KIP)](https://cwiki.apache.org/confluence/display/kafka/kafka+improvement+proposals)
     - [러스트 검토 요청(RFCs)](https://github.com/rust-lang/rfcs)
-- [웹][Effective Software Design Documents](https://wecode.wepay.com/posts/effective-software-design-documents) : 위페이가 설계를 수행하는 방법과 그 방법이 어떻게 개선돼왔는지를 설명
+- (웹)[Effective Software Design Documents](https://wecode.wepay.com/posts/effective-software-design-documents) : 위페이가 설계를 수행하는 방법과 그 방법이 어떻게 개선돼왔는지를 설명
     - [설계 문서 템플릿](https://github.com/wepay/design_doc_template)
-- [책]Elements of Style : 영어 글쓰기에 대한 유명한 책으로 번역판도 여러번 나왔다.
+- (책)Elements of Style : 영어 글쓰기에 대한 유명한 책으로 번역판도 여러번 나왔다.
      - [글쓰기의 요소(삽화판)](https://product.kyobobook.co.kr/detail/S000001729444) (2016년 출판, 장영준 역) : '개발자 온보딩 가이드'에서 소개한 판인데 현재 품절이라 중고로만 구할 수 있다. [Yes24에서 원서](https://www.yes24.com/Product/Goods/74241463)가 같은 삽화가 들어간 판으로는 배송비 고려하면 가장 싸게 구할 수 있는 경로인듯하다.
      - [글쓰기의 요소](https://play.google.com/store/books/details/%EC%9C%8C%EB%A6%AC%EC%97%84_%EC%8A%A4%ED%8A%B8%EB%A0%81%ED%81%AC_2%EC%84%B8_%EA%B8%80%EC%93%B0%EA%B8%B0%EC%9D%98_%EC%9A%94%EC%86%8C) (2016년 출판. 김영일 역, 전자책)
     - [영어 글쓰기의 기본](https://www.yes24.com/Product/Goods/2746329) (2007년 출판, 조서연 공역) : 번역서와 원서가 한권으로 묶여서 나온 판이다. 현재도 구매 가능하다. 역자가 쓴 저서인 [영어 글쓰기의 기본 2](https://www.yes24.com/Product/Goods/4671236)도 있다.
-- [책][글쓰기 생각쓰기](https://www.yes24.com/Product/Goods/2774464)
-- [웹]폴 그레이엄(Paul Grahm)의 글쓰기에 대한 기고
+- (책)[글쓰기 생각쓰기](https://www.yes24.com/Product/Goods/2774464)
+- (웹)폴 그레이엄(Paul Grahm)의 글쓰기에 대한 기고
     - [How to Write Usefully](http://www.paulgraham.com/useful.html)
     - [Write Like You Talk](http://www.paulgraham.com/talk.html)
 
 ### 11장 소프트웨어 수명주기를 고려한 진화하는 아키텍처 구현
-- [책]진화적 아키텍처: 피트니스 함수, 거버넌스 자동화를 활용해 생산성 높은 소프트웨어 구축하기
+- (책)진화적 아키텍처: 피트니스 함수, 거버넌스 자동화를 활용해 생산성 높은 소프트웨어 구축하기
     - [종이책](https://www.yes24.com/Product/Goods/121961003)
     - [전자책](https://play.google.com/store/books/details/%EB%8B%90_%ED%8F%AC%EB%93%9C_%EC%A7%84%ED%99%94%EC%A0%81_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98?id=6w_UEAAAQBAJ)
     - '필독! 개발자 온보딩 가이드' 본문에서는 원서가 소개되어 있는데, 2023년 8월에 번역판이 출판되었다.
-- [책][도메인 주도 설계 구현: Implementing Domain-Driven Design](https://www.yes24.com/Product/Goods/25100510)
-- [책][A Philosophy of Software Design, 2ED](https://www.amazon.com/Philosophy-Software-Design-2nd-ebook/dp/B09B8LFKQL/)
-- [책][Elements of Clojure](https://www.amazon.com/Elements-Clojure-Zachary-Tellman/dp/0359360580/)
+- (책)[도메인 주도 설계 구현: Implementing Domain-Driven Design](https://www.yes24.com/Product/Goods/25100510)
+- (책)[A Philosophy of Software Design, 2ED](https://www.amazon.com/Philosophy-Software-Design-2nd-ebook/dp/B09B8LFKQL/)
+- (책)[Elements of Clojure](https://www.amazon.com/Elements-Clojure-Zachary-Tellman/dp/0359360580/)
 - [동영상]["Simple Made Easy" - Rich Hickey (2011)](https://www.youtube.com/watch?v=SxdOUGdseq4) : 간결성, 복잡성, 손쉬움, 좋은 소프트웨어를 구현하는 방법에 대해서 설명
-- [책][Data Mesh](https://www.amazon.com/Data-Mesh-Zhamak-Dehghani-ebook/dp/B09V4KWWJ8/)
-- [책][데이터 중심 애플리케이션 설계: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 시스템을 지탱하는 핵심 아이디어](https://www.yes24.com/Product/Goods/595ref=sr_1_1?crid=3UIMYGOHHDTLL&keywords=data+mesh&qid=1698069866&sprefix=data+me%2Caps%2C261&sr=8-166585)
+- (책)[Data Mesh](https://www.amazon.com/Data-Mesh-Zhamak-Dehghani-ebook/dp/B09V4KWWJ8/)
+- (책)[데이터 중심 애플리케이션 설계: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 시스템을 지탱하는 핵심 아이디어](https://www.yes24.com/Product/Goods/595ref=sr_1_1?crid=3UIMYGOHHDTLL&keywords=data+mesh&qid=1698069866&sprefix=data+me%2Caps%2C261&sr=8-166585)
 
 ### 12장 효율적인 협업을 위한 애자일 문화
-- [웹][Principles behind the Agile Manifesto](https://agilemanifesto.org/principles.html)
-- [웹][Atlassian의 애자일 문서](https://www.atlassian.com/agile)
+- (웹)[Principles behind the Agile Manifesto](https://agilemanifesto.org/principles.html)
+- (웹)[Atlassian의 애자일 문서](https://www.atlassian.com/agile)
 
 ### 13장 관리자, 팀장, 상사와 함께 일하기
-- [책]개발 7년차, 매니저 1일차: 개발만 해왔던 내가, 어느 날 갑자기 ‘팀’을 맡았다!
+- (책)개발 7년차, 매니저 1일차: 개발만 해왔던 내가, 어느 날 갑자기 ‘팀’을 맡았다!
     - [종이책](https://www.yes24.com/Product/Goods/87336637)
     - [전자책](https://play.google.com/store/books/details/%EC%B9%B4%EB%AF%B8%EC%9C%A0_%ED%91%B8%EB%A5%B4%EB%8B%88%EC%97%90_%EA%B0%9C%EB%B0%9C_7%EB%85%84%EC%B0%A8_%EB%A7%A4%EB%8B%88%EC%A0%80_1%EC%9D%BC%EC%B0%A8?id=Qbf_DwAAQBAJ)
-- [책][An Elegant Puzzle: Systems of Engineering Management](https://www.amazon.com/Elegant-Puzzle-Systems-Engineering-Management-ebook/dp/B07QYCHJ7V/)
-- [책]일의 99%는 피드백이다: 하버드 협상연구소에서 알려주는 대화의 기술
+- (책)[An Elegant Puzzle: Systems of Engineering Management](https://www.amazon.com/Elegant-Puzzle-Systems-Engineering-Management-ebook/dp/B07QYCHJ7V/)
+- (책)일의 99%는 피드백이다: 하버드 협상연구소에서 알려주는 대화의 기술
     - [종이책](https://www.yes24.com/Product/Goods/102003851)
     - [전자책](https://play.google.com/store/books/details/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%8A%A4%ED%86%A4_%EC%89%B4%EB%9D%BC_%ED%9E%8C_%EC%9D%BC%EC%9D%98_99_%EB%8A%94_%ED%94%BC%EB%93%9C%EB%B0%B1%EC%9D%B4%EB%8B%A4?id=UccyEAAAQBAJ)
-- [책][Managing Up: How to Move up, Win at Work, and Succeed with Any Type of Boss](https://www.amazon.com/Managing-Up-Move-Work-Succeed-ebook/dp/B07BB4QFDF/) : 상사나 관리자의 개성을 어떻게 고려해야하는지, 엄격한 관리자에 대응하는 법, 이직하는 방법 등을 다룸.
-- [책][하이 아웃풋 매니지먼트: 어떻게 성과를 높일 것인가](https://www.yes24.com/Product/Goods/61333181)
+- (책)[Managing Up: How to Move up, Win at Work, and Succeed with Any Type of Boss](https://www.amazon.com/Managing-Up-Move-Work-Succeed-ebook/dp/B07BB4QFDF/) : 상사나 관리자의 개성을 어떻게 고려해야하는지, 엄격한 관리자에 대응하는 법, 이직하는 방법 등을 다룸.
+- (책)[하이 아웃풋 매니지먼트: 어떻게 성과를 높일 것인가](https://www.yes24.com/Product/Goods/61333181)
