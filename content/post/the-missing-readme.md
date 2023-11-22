@@ -62,7 +62,7 @@ https://www.yes24.com/Product/Goods/119108069
 ### p102
 > 예외는 일찍 던지고 최대한 나중에 처리하자.
 
-(의견) 최대한 나중에 처리하는 것보다는 적절한 추상화 레이어에서 처리하자는 것이 좋다고 생각한다. 예를 들면 사용자의 ID로 조회했을 떄 DB 조회가 실패했을 때 생기는 `EmptyResultDataAccessException`을 어플리케이션 콜스택의 마지막에서 처리하기보다는 비지니스 로직을 다루는 로직에서 `UserNotFoundException`과 같이 비지니스 맥락의 의미가 부여된 예외로 바꾸는 것이 좋을 때도 있다.
+(의견) 최대한 나중에 처리하는 것보다는 적절한 추상화 레이어에서 처리하자는 것이 좋다고 생각한다. 예를 들면 사용자의 ID로 조회했을 때 DB 조회가 실패했을 때 생기는 `EmptyResultDataAccessException`을 어플리케이션 콜스택의 마지막에서 처리하기보다는 비지니스 로직을 다루는 로직에서 `UserNotFoundException`과 같이 비지니스 맥락의 의미가 부여된 예외로 바꾸는 것이 좋을 때도 있다.
 
 ### p115
 > 카운터, 게이지, 히스토그램을 쉽게 계산할 수 있다고 해서 지표 라이브러리를 직접 구현할 생각은 금물이다. 비표준 라이브러리의 유지보수는 악몽에 가깝다. 표준 라이브러리는 애초에 모든 것과 통합할 수 있도록 만들어져 있다.
@@ -194,8 +194,8 @@ Dark launching 소개
 
 (의견 + 경험 공유) 의도한 바은 아니지만 JPA의 스키마 관리 기능이 운영환경에서 실행되어서 발생하는 장애를 종종 전해듣는다. 스프링부트의 `spring.jpa.hibernate.ddl-auto` 같은 옵션도 Local PC에 DB가 따로 설치되어 있거나 Embeded DB를 쓸때만 활성화해야 한다고 생각한다. 공용 개발 DB에서부터는 Liquibase와 같은 스키마 관리 도구를 활용하는 것이 좋다. 공용 개발 DB라도 여러 개가 있는 것이 다양한 테스트를 하는데 유리하고, 개발 DB가 여러개가 되면 스키마 관리 도구의 필요성이 높아진다. Oracle 등 개발자가 여러 인스턴스를 설치하는데 제약이 있는 DB를 오랫동안 써 온 개발자는  이런 도구의 필요성을 느끼거나 적용할 수 있는 기회를 얻기가 어려울 수도 있다.
 
-운영DB는 DBA가 따로 SQL파일을 실행해서 스키마를 반영하는 회사라도 Liquibase는 충분히 가능하다.
-Liquibase는 오프라인 지원 기능이 있어서 실제DB에 스키마 변경을 실행하지 않고 DDL을 파일로 뽑아낼수도 있다.
+운영DB는 DBA가 따로 SQL파일을 실행해서 스키마를 반영하는 회사라도 Liquibase는 충분히 사용 가능하다.
+Liquibase는 오프라인 지원 기능이 있어서 실제 DB에 스키마 변경을 실행하지 않고 DDL을 파일로 뽑아낼수도 있다.
 예를 들어 스키마 버전 1.0.0-RC1과 1.0.0-RC2 버전 사이에 변경된 컬럼을 반영하는 DDL을 담은 .sql파일을 뽑을 때는 아래 명령어로 가능하다.
 
 ```
@@ -298,8 +298,9 @@ OKR 설명
      - 번역판 초판에는 이 책 제목이 '신뢰할 수 있는 소프트웨어 출시' 였으나 중쇄를 하면서 원서와 동일하게 제목이 바뀌었다고 함.([박성철 님의 관련 댓글](https://www.facebook.com/fupfin.geek/posts/pfbid02ksHoMdnvhkJkN9xWS4qQimt541smxX3oscttadaYVMHLxtQ6CZtkKsHEw82LjXs3l?comment_id=328411842995894)) '개발자 온보딩 가이드'에서는 번역판 초판의 제목으로 표기되어 있어 있음.
 - [책][사이트 신뢰성 엔지니어링: 구글이 공개하는 서비스 개발과 운영 노하우](https://www.yes24.com/Product/Goods/57979286) : 8장에 릴리스 엔지니어링 참조
 - [웹][Amazon Builders' Library](https://aws.amazon.com/ko/builders-library/)
-- [책][Release it: 성공적인 출시를 위한 소프트웨어 설계와 배치](https://www.yes24.com/Product/Goods/2753365) (2007년 출판)
-    - 원서는 2018년에 2판까지 나왔음. [Amazon](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395/)
+- [책][Release의 모든 것 - 대규모 웹 분산 시스템을 위한 운영 고려 설계](https://smartstore.naver.com/yes24book/products/9565539174) (번역서 2판. 2023년 11월 출간)
+    - 번역서 1판 : [Release it: 성공적인 출시를 위한 소프트웨어 설계와 배치](https://www.yes24.com/Product/Goods/2753365) (2007년 출판)
+    - 원서 2판 : [Release It!: Design and Deploy Production-Ready Software](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395/)(2018년 출간)
     - 2판의 번역서도 현재 한빛미디에서 준비 중에 있다고 함.
 
 ### 9장 긴급대응 온콜 업무
@@ -337,7 +338,6 @@ OKR 설명
 - [동영상]["Simple Made Easy" - Rich Hickey (2011)](https://www.youtube.com/watch?v=SxdOUGdseq4) : 간결성, 복잡성, 손쉬움, 좋은 소프트웨어를 구현하는 방법에 대해서 설명
 - [책][Data Mesh](https://www.amazon.com/Data-Mesh-Zhamak-Dehghani-ebook/dp/B09V4KWWJ8/)
 - [책][데이터 중심 애플리케이션 설계: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 시스템을 지탱하는 핵심 아이디어](https://www.yes24.com/Product/Goods/595ref=sr_1_1?crid=3UIMYGOHHDTLL&keywords=data+mesh&qid=1698069866&sprefix=data+me%2Caps%2C261&sr=8-166585)
-
 
 ### 12장 효율적인 협업을 위한 애자일 문화
 - [웹][Principles behind the Agile Manifesto](https://agilemanifesto.org/principles.html)
