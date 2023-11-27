@@ -215,7 +215,7 @@ date: 2021-03-27
 
 > The classpath scanning approach has its drawbacks, however. First, it's invasive in that it requires us to put a framework-specific annotation in our classes. If you are a clean architecture hardliner, you'd say that this is forbidden as it binds our code to a specific framework.
 
-> 하지만 클래스패스 스캐닝 방식에는 단점이 있다. 첫번째로, 클래스에 프레임워크에 특화된 애너테이션을 붙여야 한다는 점에서 침추적이다. 강견한 클린 아키텍처파는 이런 방식이 코드를 특정한 프레임워크와 결합시키기 떄문에 사용하지 말아야한다고 주장할 것이다.
+> 하지만 클래스패스 스캐닝 방식에는 단점이 있다. 첫번째로, 클래스에 프레임워크에 특화된 애너테이션을 붙여야 한다는 점에서 침추적이다. 강견한 클린 아키텍처파는 이런 방식이 코드를 특정한 프레임워크와 결합시키기 때문에 사용하지 말아야한다고 주장할 것이다.
 
 (의견)
 
