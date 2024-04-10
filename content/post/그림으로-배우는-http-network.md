@@ -1,8 +1,12 @@
 ---
 title: 그림으로 배우는 HTTP & Network
-tags: [http]
+tags: [http, network]
 date: 2018-01-03
 ---
+
+![](https://image.yes24.com/momo/TopCate448/MidCate010/44791452.jpg)
+
+https://www.yes24.com/Product/Goods/15894097
 
 ## 인상 깊은 단락
 
