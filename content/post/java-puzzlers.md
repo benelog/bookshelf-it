@@ -4,7 +4,8 @@ title: Java puzzlers
 tags: [java]
 ---
 
-## 인상싶은 내용
+## 인상 깊은 내용
+
 ### puzzle 57 (141쪽)
 hashCode() 미구현 사례
 
