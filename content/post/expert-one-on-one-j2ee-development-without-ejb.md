@@ -10,9 +10,9 @@ https://www.amazon.com/Expert-Development-without-Johnson-Paperback/dp/B011YTQ5C
 
 ## 감상
 
-책에서도 로드존슨은 마틴파울러 책의 분산 컴퓨팅의 제1법칙을 인용하면서, 대부분의 J2EE Application, 특히 Web application에서는 분산 아키텍쳐에서 얻는 이득이 없다고 이야기합니다. Logical layering이 Physical layering보다 중요하며, 깨끗한 관심사의 분리를 경량 프레임웍을 통해서도 이룰 수 있음을 이야기하고 있습니다. ( 309,317,318쪽)
+책에서도 로드존슨은 마틴파울러 책의 분산 컴퓨팅의 제1법칙을 인용하면서, 대부분의 J2EE Application, 특히 Web application에서는 분산 아키텍쳐에서 얻는 이득이 없다고 이야기합니다. Logical layering이 Physical layering보다 중요하며, 깨끗한 관심사의 분리를 경량 프레임웍을 통해서도 이룰 수 있음을 이야기하고 있습니다. (309,317,318쪽)
 
-EJB에서도 Local Session Bean이 증가한 사례를 이야기하고, Remote EJB는 필요해지는 시점에 도입할 수 있으므로 미래에 있을 가상의 요구사항(phantom requriement)을 가정하는 것은 위험하다고 이야기합니다. (335쪽)
+EJB에서도 Local Session Bean이 증가한 사례를 이야기하고, Remote EJB는 필요해지는 시점에 도입할 수 있으므로 미래에 있을 가상의 요구사항(phantom requirement)을 가정하는 것은 위험하다고 이야기합니다. (335쪽)
 
 ## 인상 깊은 단락
 
@@ -37,3 +37,5 @@ EJB에서도 Local Session Bean이 증가한 사례를 이야기하고, Remote E
 
 > The third problem is often harder to tackle. As I’ve noted before, technical challenges usually pale in comparison with political challenges. A common offender here is the cowboy developer. (He normally is a he, so I won’t try to avoid gender-specific language.) A cowboy knows that he writes excellent code very fast. He often really does know Java and the APIs he uses well. He knows that his code is so good that he doesn’t need to bother with the cumbersome routine of writing tests. I’ve worked with enough such individuals to shudder when I encounter one. I’ve never met one who wrote better code than a good developer who was also committed to testing—perhaps a reflection of the fact that desire to write testable code usually means writing good code.
 
+(의견) 지금으로부터 20년 전인 2004년에 나온 책이니 그때는 더 테스트를 만들기 어렵고 현장에서 공감하는 사람도 적었을듯하다.
+로드존슨이 한국에서 태어나서 2020년대 한국에서 이 단락을 인터넷에 올렸다면 악플을 꽤나 받았을듯하다. 특히 'He normally is a he, so I won’t try to avoid gender-specific language' 때문에.
