@@ -1,6 +1,6 @@
 ---
 title: 자바 프로그래밍 면접, 이렇게 준비한다
-tags: [java, 면접, algorithm]
+tags: [java, 면접, algorithm, computer-science-basic]
 date: 2020-07-20
 ---
 
