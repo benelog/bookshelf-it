@@ -24,13 +24,13 @@ Netflix의 도구들
     - [Servo](https://github.com/Netflix/servo) : Application Monitoring Library
     - [Spectator](https://github.com/Netflix/spectator) : About
       Client library for collecting metrics
-    - [Vizceral](https://netflixtechblog.고com/vizceral-open-source-acc0c32113fe) : 트래픽 흐름 시각화 도구
+    - [Vizceral](https://netflixtechblog.com/vizceral-open-source-acc0c32113fe) : 트래픽 흐름 시각화 도구
     - [Turbine](https://github.com/Netflix/Turbine) : Server Side Event Stream Aggregator
 - [Titus](https://netflix.github.io/titus/) : 컨테이너 플랫폼
 
 https://netflix.github.io/ 도 참조
 
-## 인상 깊은 단략
+## 인상 깊은 단락
 
 ### p51
 > 한가지 추가적인 것은 피보탈 트래커에서는 기본적으로 '버그' 해결을 팀의 속도에 포함하지 않는다.
@@ -41,7 +41,7 @@ https://netflix.github.io/ 도 참조
 > 그래서 이전의 부품을 두 개씩 만들어 '죽지 않는' 서비스를 만드는 대신, 망가져도 되는 하드웨어를 여러 개 준비하는 방법을 택하는 분산 시스템 구성 방법이 함께 발전한다.
 
 ### p87
-카오스 몽키, 카오스 릴라, 카오수 콩 소개
+카오스 몽키, 카오스 릴라, 카오스 콩 소개
 
 ### p145
 
@@ -59,7 +59,7 @@ Vizceral demo : https://www.youtube.com/watch?v=PoU03G4WuHI
 '장애를 끌어안다' 철학.
 
 ### p179
-> 어느 넷플릭스 엔지니어는 "아마존웹서비스를 우리는 카오스 몽키 as a 서비스"라고 불러요. 우리가 카오스 몽키로 장애를 마든 것보다 그들이 만든 장애로 인해 중단된 서버가 훨씬 많기 때문이죠"라는 종담을 하기도 했다.
+> 어느 넷플릭스 엔지니어는 "아마존웹서비스를 우리는 카오스 몽키 as a 서비스"라고 불러요. 우리가 카오스 몽키로 장애를 만든 것보다 그들이 만든 장애로 인해 중단된 서버가 훨씬 많기 때문이죠"라는 농담을 하기도 했다.
 
 ### p184
 https://www.networkworld.com/article/3178076/why-netflix-didnt-sink-when-amazon-s3-went-down.html 기사 소개

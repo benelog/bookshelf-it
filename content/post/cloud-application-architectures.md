@@ -19,7 +19,7 @@ tags: [cloud, architecture]
 
 ### p24
 > 클라우드 인프라스터럭처에서 생명 주기가 긴 노드가 필요한 시스템이 겪는 어려움은 
-가상 머신의 평균 무조간 시간(MTBF, Mean Time Between Failures)이 물리적인 하드웨어보다 짧다는 것이다. 즉 더 자주 고장이 난다는 것을 의미한다.
+가상 머신의 평균 무고장 시간(MTBF, Mean Time Between Failures)이 물리적인 하드웨어보다 짧다는 것이다. 즉 더 자주 고장이 난다는 것을 의미한다.
 
 ### p119
 http://bastille-linux.sourceforge.net/ 언급

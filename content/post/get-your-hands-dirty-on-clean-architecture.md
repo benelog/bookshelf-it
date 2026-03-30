@@ -51,7 +51,7 @@ date: 2021-03-27
 
 > The Java Persistence API (the standard ORM-API in the Java world), for instance, requires ORM-managed entities to have a default constructor without arguments that we might want to avoid in our domain model.
 
-> 가령 Java Persistence API(자바 세계의 표준 ORM-API)에서는 ORM이 관리하는 엔티티에 인자가 ㅇ벗는 기본 생성자를 추가하도록 강제한.다 이것이 바로 도메인 모델에서는 포함해서는 안 될 프레임워크에 특하된 결합의 예다.
+> 가령 Java Persistence API(자바 세계의 표준 ORM-API)에서는 ORM이 관리하는 엔티티에 인자가 없는 기본 생성자를 추가하도록 강제한.다 이것이 바로 도메인 모델에서는 포함해서는 안 될 프레임워크에 특하된 결합의 예다.
 
 (메모) Spring JDBC의 BeanPropertyRowMapper도 setter가 필수로 있어야하는 제약이 있었다. Spring framework 5.3부터 추가된 DataClassRowMapper 에서는 그런 문제가 해결되었다.
 
@@ -134,7 +134,7 @@ date: 2021-03-27
 
 > You choose JPA as an OR mapper because it's the thing people use for this problem. A couple months into development you curse eager and lazy loading and the caching features and wish for something simpler. JPA is a great tool, but for many problems, simpler solutions may be, well, simpler.
 
-> 사람들이 이런 유형의 문제를 해결하기 위해 선택하는 도구가 JPA이기 때문에 여러분도 OR 매퍼로 JPA를 선택했을 것이다. 하지만 개발을 시작하고 2~3개월이 지나면 즉시로딩/지연로딩, 캐싱 기능을 저주하면서 조금 더 간단한 뭔가를 원하게 될 ㅅ수도 있다. JPA는 좋은 도구이긴 하지만 많은 문제에 더 간단한 도구가 있을 수 있다.
+> 사람들이 이런 유형의 문제를 해결하기 위해 선택하는 도구가 JPA이기 때문에 여러분도 OR 매퍼로 JPA를 선택했을 것이다. 하지만 개발을 시작하고 2~3개월이 지나면 즉시로딩/지연로딩, 캐싱 기능을 저주하면서 조금 더 간단한 뭔가를 원하게 될 수도 있다. JPA는 좋은 도구이긴 하지만 많은 문제에 더 간단한 도구가 있을 수 있다.
 
 ## 7 : Testing Architecture Elements (아키텍처 요소 테스트하기)
 
@@ -153,7 +153,7 @@ date: 2021-03-27
 > I suggest measuring test success by how comfortable we feel to ship the software.
 
 > 라인 커버리지(line coverage)는 테스트 성공을 측정하는 데 있어서는 잘못된 지표다. 코드의 중요한 부분이 전혀 커버되지 않을 수 있기 때문에 100%를 제외한 어떤 목표도 완전히 무의미하다. 심지어 100%라 하더라도 버그가 잘 잡혔는지 확신할 수 없다.
-> 나는 얼마나 마음 편하게 소프트웨어를 ㅍ배포할 수 있느냐를 테스트의 성공 기준으로 삼으면 된다고 생각한다.
+> 나는 얼마나 마음 편하게 소프트웨어를 배포할 수 있느냐를 테스트의 성공 기준으로 삼으면 된다고 생각한다.
 
 
 ### p88 (번역판 p96)
@@ -184,7 +184,7 @@ date: 2021-03-27
 
 > This mapping strategy also leads to a clean domain model that is not dirtied by web or persistence concerns. It does not contain JSON or ORM mapping annotations. The single responsibility principle is satisfied.
 
-이 매핑 전략을 웹이나 영속 성관심사로 오염되지 않은 깨끗 한도메인 모델로 이어진다. JSON이나 ORM 매핑 애너테이션도 없어도 된다. 단일 책임 원칙을 만족하는 것이다.
+이 매핑 전략을 웹이나 영속성 관심사로 오염되지 않은 깨끗한 도메인 모델로 이어진다. JSON이나 ORM 매핑 애너테이션도 없어도 된다. 단일 책임 원칙을 만족하는 것이다.
 
 ### p97 (번역서 p105)
 
@@ -201,7 +201,7 @@ date: 2021-03-27
 
 > This selection of mapping strategies per situation certainly is harder and requires more communication than simply using the same mapping strategy for all situations, but it will reward the team with a codebase that does just what it needs to do and is easier to maintain, as long as the mapping guidelines are known.
 
-> 상황별로 매핑 전략을 선택하는 것은 모든 상황에 같은 매핑 전략을 사요ㅗㅇ하는 것보다 분명 더 어렵고 더 많은 커뮤니케이션을 필요로 하겠지만 매핑 가이드라인이 있는 한, 코드가 정확히 해야 하는 일만 수행하면서도 더 유지보수하기 쉬운 코드로 팀에 보상이 되어 돌아올 것이다.
+> 상황별로 매핑 전략을 선택하는 것은 모든 상황에 같은 매핑 전략을 사용하는 것보다 분명 더 어렵고 더 많은 커뮤니케이션을 필요로 하겠지만 매핑 가이드라인이 있는 한, 코드가 정확히 해야 하는 일만 수행하면서도 더 유지보수하기 쉬운 코드로 팀에 보상이 되어 돌아올 것이다.
 
 ## 9 : Assembing the Application (애플리케이션 조립하기)
 
@@ -215,18 +215,18 @@ date: 2021-03-27
 
 > The classpath scanning approach has its drawbacks, however. First, it's invasive in that it requires us to put a framework-specific annotation in our classes. If you are a clean architecture hardliner, you'd say that this is forbidden as it binds our code to a specific framework.
 
-> 하지만 클래스패스 스캐닝 방식에는 단점이 있다. 첫번째로, 클래스에 프레임워크에 특화된 애너테이션을 붙여야 한다는 점에서 침추적이다. 강견한 클린 아키텍처파는 이런 방식이 코드를 특정한 프레임워크와 결합시키기 때문에 사용하지 말아야한다고 주장할 것이다.
+> 하지만 클래스패스 스캐닝 방식에는 단점이 있다. 첫번째로, 클래스에 프레임워크에 특화된 애너테이션을 붙여야 한다는 점에서 침투적이다. 강경한 클린 아키텍처파는 이런 방식이 코드를 특정한 프레임워크와 결합시키기 때문에 사용하지 말아야한다고 주장할 것이다.
 
 (의견)
 
 특정 기술과 환경에 종속적이지 않게 활용할수 있는 객체를 POJO라고 한다면, 특정 라이브러리의 애노테이션이 달린 클래스의 인스턴스가 POJO인지는 논쟁이 있다.
 
 애노테이션이 달린 클래스를 특정 환경에 의존하지 않는 런타임에서 호출해도 그대로 쓸수 있기 때문에 POJO라는 의견을 들은적이 있고, 그것도 일리가 있는 말이다.
-`@Copponent`가 달린 클래스를 스프링에 대한 의존성은 Maven에서 optional이나 provided로 놓고 jar로  배포한다면, jar 쓰는 쪽에서 Spring에 대한 의존성을 추가하지 않고도 사용할 수 있다.
+`@Component`가 달린 클래스를 스프링에 대한 의존성은 Maven에서 optional이나 provided로 놓고 jar로  배포한다면, jar 쓰는 쪽에서 Spring에 대한 의존성을 추가하지 않고도 사용할 수 있다.
 
 하지만 그 클래스를 고쳐서 컴파일할때는 스프링에 대한 의존성이 필요하고, DI framework을 바꿀때 해당 애노테이션을 다 고쳐야한다는 점은 프레임워크에 대한 의존성/종속성/결합을 의미한다. 상속이나 interface보다는 약한 종속성이라 할지라도 종속성은 존재한다.
 
-다만 종속성의 수준을 단계별로 생각해볼 필요는 있고 때로는 애노테이션의 상대적으로 약한 종석성을 실용적으로 활용하는 전략도 선택할만하다고 본다.
+다만 종속성의 수준을 단계별로 생각해볼 필요는 있고 때로는 애노테이션의 상대적으로 약한 종속성을 실용적으로 활용하는 전략도 선택할만하다고 본다.
 
 ## 10 : Enforcing Architecture Boundaries (아키텍처 경계 강제하기)
 

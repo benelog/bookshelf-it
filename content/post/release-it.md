@@ -13,7 +13,7 @@ https://www.yes24.com/Product/Goods/2753365
 https://www.yes24.com/Product/Goods/123763401
 
 
-## 인상 깊은  단략
+## 인상 깊은 단락
 
 ### (1판) p4
 
@@ -38,4 +38,4 @@ https://www.yes24.com/Product/Goods/123763401
 
 ### (1판) p257
 
-네트워크 연결, 데이터베이스 연결 워크 스레드(worker thread)와 같이 새엇ㅇ하는데 값비싼 객체를 객체 풀링에 보관하자.
+네트워크 연결, 데이터베이스 연결 워크 스레드(worker thread)와 같이 생성하는데 값비싼 객체를 객체 풀링에 보관하자.
