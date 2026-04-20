@@ -1,11 +1,10 @@
 ---
 title: IT 세계의 괴물들
-tags: [만화, it-기초]
+tags: [만화, computer-science-basic]
 date: 2024-08-11
 ---
 
 ![](https://image.yes24.com/goods/124014027/XL)
-
 
 https://www.yes24.com/Product/Goods/124014027
 
