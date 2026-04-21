@@ -1,7 +1,7 @@
 ---
 date: 2025-01-04
 title: Release의 모든 것
-tags: [architecture]
+tags: [architecture, pattern, 성능]
 ---
 
 ![](https://image.yes24.com/momo/TopCate59/MidCate06/5850621.jpg)

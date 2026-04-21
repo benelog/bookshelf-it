@@ -1,6 +1,6 @@
 ---
 title: 데드라인
-tags: [프로젝트-관리, 조직관리, 방법론, 소설, tom-demarco]
+tags: [프로젝트-관리, 조직관리, software-engineering, 소설, tom-demarco]
 date: 2003-03-10
 ---
 

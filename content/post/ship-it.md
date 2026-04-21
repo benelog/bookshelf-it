@@ -1,7 +1,7 @@
 ---
 date: 2007-10-22
 title: Ship it! 성공적인 소프트웨어 개발 프로젝트를 위한 실용 가이드
-tags: [방법론, agile]
+tags: [software-engineering, agile]
 ---
 
 ![](https://image.yes24.com/momo/TopCate57/MidCate09/5683498.jpg)

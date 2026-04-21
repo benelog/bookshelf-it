@@ -1,7 +1,7 @@
 ---
 date: 2007-07-28
 title: Code completed 2nd Edtion
-tags: [구현-지침]
+tags: [구현-지침, 설계]
 ---
 
 ## 인상적인 내용

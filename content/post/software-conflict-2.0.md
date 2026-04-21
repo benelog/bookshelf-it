@@ -1,6 +1,6 @@
 ---
 title: 소프트웨어 컨플릭트 2.0
-tags: [방법론]
+tags: [software-engineering, 설계, bug]
 date: 2007-02-03
 ---
 

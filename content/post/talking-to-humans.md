@@ -1,6 +1,6 @@
 ---
 title: Talking To Humans
-tags: [방법론]
+tags: [software-engineering]
 date: 2019-09-18
 ---
 

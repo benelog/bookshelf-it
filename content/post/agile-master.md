@@ -1,7 +1,7 @@
 ---
 date: 2012-03-11
 title: 애자일 마스터
-tags: [agile, 방법론]
+tags: [agile, software-engineering]
 ---
 
 ## 생각 메모

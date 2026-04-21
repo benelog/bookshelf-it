@@ -1,6 +1,6 @@
 ---
 title: 인간, 조직, 권력 그리고 어느 SW엔지니어의 변
-tags: [한국-it, 방법론, 개발-수필]
+tags: [한국-it, software-engineering, 개발-수필]
 date: 2011-03-11
 ---
 

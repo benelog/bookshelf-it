@@ -1,6 +1,6 @@
 ---
 title: 필독! 개발자 온보딩 가이드
-tags: [설계, 구현, 방법론]
+tags: [설계, 구현, software-engineering]
 date: 2023-10-01
 ---
 

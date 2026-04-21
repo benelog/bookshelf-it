@@ -1,6 +1,6 @@
 ---
 title: 하드코드(Hard code)
-tags: [방법론, 조직관리]
+tags: [software-engineering, 조직관리]
 date: 2010-08-25
 ---
 

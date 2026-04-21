@@ -1,7 +1,7 @@
 ---
 title: Bridging the communication GAP
 date: 2020-09-08
-tags: [방법론, test]
+tags: [software-engineering, test]
 ---
 
 ## 인상 깊은 단락

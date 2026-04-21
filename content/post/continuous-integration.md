@@ -1,7 +1,7 @@
 ---
 title: 지속적인 통합
 date: 2008-03-27
-tags: [방법론, test]
+tags: [software-engineering, test]
 ---
 
 ![](https://image.yes24.com/momo/TopCate62/MidCate01/6107988.jpg)
