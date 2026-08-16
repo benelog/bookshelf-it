@@ -2,4 +2,5 @@ target
 build
 .idea
 public
+.hugo_build.lock
 
