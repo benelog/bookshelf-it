@@ -1,6 +1,7 @@
 baseURL = "https://bookshelf-it.benelog.net/"
 languageCode = "ko-KR	"
 defaultContentLanguage = "ko"
+timeZone = "Asia/Seoul"
 title = "IT 책장"
 theme = "papercss-hugo-theme"
 disqusShortname = "bookshelf-it-benelog"
