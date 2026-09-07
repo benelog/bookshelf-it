@@ -1,6 +1,6 @@
 ---
 title: Professional Java Development with the Spring Framework
-tags: [java, spring-framework, framework]
+tags: [java, spring, framework]
 date: 2025-01-27
 ---
 
