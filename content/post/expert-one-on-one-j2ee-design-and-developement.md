@@ -1,5 +1,5 @@
 ---
-title: Expert One-On-One J2Ee Design and Development
+title: Expert One-On-One J2EE Design and Development
 tags: [java, spring-framework, framework]
 date: 2025-01-27
 ---
