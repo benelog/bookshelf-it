@@ -17,6 +17,7 @@ googleAnalytics = "UA-138559685-3"
   quality = 99
 
 [params]
+  homeTitle = "정상혁의 IT 독서 기록"
   homeMetaContent = "IT 책장"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
