@@ -4,6 +4,10 @@ title: 폴리글랫 프로그래밍
 tags: [개발-수필]
 ---
 
+![](https://image.yes24.com/goods/12204890/XL)
+
+https://www.yes24.com/product/goods/12204890
+
 ## 인상 깊은 부분
 
 
