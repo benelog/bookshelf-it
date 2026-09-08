@@ -1,7 +1,7 @@
 ---
 date: 2023-11-07
 title: SQL Antipatterns
-tags: [db, sql, to-read]
+tags: [db, to-read]
 ---
 
 ![](https://image.yes24.com/goods/123318416/XL)

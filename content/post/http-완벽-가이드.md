@@ -1,7 +1,7 @@
 ---
 date: 2014-12-15
 title: HTTP 완벽 가이드
-tags: [네트워크, to-read]
+tags: [network, to-read]
 ---
 
 ![](https://image.yes24.com/goods/15381085/XL)

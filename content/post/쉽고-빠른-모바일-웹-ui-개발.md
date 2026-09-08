@@ -1,7 +1,7 @@
 ---
 date: 2014-02-25
 title: 쉽고 빠른 모바일 웹 UI 개발
-tags: [웹, ui, to-read]
+tags: [웹, ux, to-read]
 ---
 
 ![](https://image.yes24.com/goods/12146938/XL)

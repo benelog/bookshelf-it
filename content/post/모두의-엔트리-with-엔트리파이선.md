@@ -1,7 +1,7 @@
 ---
 date: 2017-11-20
 title: 모두의 엔트리 with 엔트리파이선
-tags: [프로그래밍, 교육, to-memo]
+tags: [구현-지침, 교육, to-memo]
 ---
 
 ![](https://image.yes24.com/goods/56849149/XL)

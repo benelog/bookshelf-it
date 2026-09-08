@@ -1,7 +1,7 @@
 ---
 date: 2021-09-08
 title: Real MySQL 8.0 2권
-tags: [db, mysql, to-read]
+tags: [db, to-read]
 ---
 
 ![](https://image.yes24.com/goods/103415767/XL)

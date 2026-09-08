@@ -1,7 +1,7 @@
 ---
 date: 2013-11-28
 title: Continuous Delivery
-tags: [배포, 애자일, to-read]
+tags: [infrastructure, agile, to-read]
 ---
 
 ![](https://image.yes24.com/goods/11406822/XL)

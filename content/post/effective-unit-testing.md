@@ -1,7 +1,7 @@
 ---
 date: 2013-11-10
 title: Effective Unit Testing
-tags: [테스트, to-read]
+tags: [test, to-read]
 ---
 
 ![](https://image.yes24.com/goods/11361087/XL)

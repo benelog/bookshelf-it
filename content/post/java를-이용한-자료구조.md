@@ -1,7 +1,7 @@
 ---
 date: 2004-09-10
 title: JAVA를 이용한 자료구조
-tags: [알고리즘, java, to-read]
+tags: [algorithm, java, to-read]
 ---
 
 ![](https://image.yes24.com/goods/4882892/XL)

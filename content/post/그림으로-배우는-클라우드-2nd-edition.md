@@ -1,7 +1,7 @@
 ---
 date: 2020-08-25
 title: 그림으로 배우는 클라우드 2nd Edition
-tags: [클라우드, 인프라, to-read]
+tags: [cloud, infrastructure, to-read]
 ---
 
 ![](https://image.yes24.com/goods/91748764/XL)

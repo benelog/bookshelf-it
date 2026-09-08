@@ -1,7 +1,7 @@
 ---
 date: 2015-01-25
 title: CODE 코드
-tags: [컴퓨터, to-read]
+tags: [computer-science-basic, to-read]
 ---
 
 ![](https://image.yes24.com/goods/16667186/XL)
