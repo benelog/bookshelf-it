@@ -1,7 +1,7 @@
 ---
 date: 2016-03-26
 title: 손에 잡히는 Vim
-tags: [vim, 개발도구, to-memo]
+tags: [vim, 개발-도구, to-memo]
 ---
 
 ![](https://image.yes24.com/goods/4810592/XL)

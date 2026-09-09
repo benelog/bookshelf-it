@@ -1,7 +1,7 @@
 ---
 date: 2018-11-04
 title: Technology Strategy Patterns
-tags: [설계, 조직관리, to-read]
+tags: [설계, 조직-관리, to-read]
 ---
 
 ![](https://image.yes24.com/goods/63818588/XL)

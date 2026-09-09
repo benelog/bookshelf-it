@@ -1,7 +1,7 @@
 ---
 date: 2009-05-06
 title: 스크럼과 XP
-tags: [agile, 조직관리, to-read]
+tags: [agile, 조직-관리, to-read]
 ---
 
 ![](https://image.yes24.com/goods/3385532/XL)

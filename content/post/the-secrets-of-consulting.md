@@ -1,6 +1,6 @@
 ---
 title: 컨설팅의 비밀
-tags: [consulting, gerald-m-weinberg, 조직관리]
+tags: [consulting, gerald-m-weinberg, 조직-관리]
 date: 2010-11-24
 ---
 

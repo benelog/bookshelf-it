@@ -1,6 +1,6 @@
 ---
 title: Head First Design Pattern
-tags: [객체지향, 설계, head-first]
+tags: [객체-지향, 설계, head-first]
 date: 2008-11-30
 ---
 
