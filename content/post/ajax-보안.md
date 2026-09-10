@@ -1,7 +1,7 @@
 ---
 date: 2008-11-10
 title: Ajax 보안
-tags: [보안, 웹, to-read]
+tags: [보안, web, to-read]
 ---
 
 ![](https://image.yes24.com/goods/3111765/XL)

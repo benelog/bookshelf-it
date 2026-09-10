@@ -1,7 +1,7 @@
 ---
 date: 2007-06-29
 title: DOM 스크립트
-tags: [웹, to-read]
+tags: [web, to-read]
 ---
 
 ![](https://image.yes24.com/goods/2636268/XL)

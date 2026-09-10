@@ -1,7 +1,7 @@
 ---
 date: 2013-09-13
 title: Play Framework Cookbook 한국어판
-tags: [framework, 웹, to-memo]
+tags: [framework, web, to-memo]
 ---
 
 ![](https://image.yes24.com/goods/6213465/XL)

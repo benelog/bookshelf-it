@@ -1,7 +1,7 @@
 ---
 date: 2006-08-01
 title: Mastering Regular Expressions
-tags: [정규-표현식, to-read]
+tags: [to-read]
 ---
 
 ![](https://image.yes24.com/goods/2225053/XL)

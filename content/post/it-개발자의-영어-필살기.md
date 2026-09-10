@@ -1,7 +1,7 @@
 ---
 date: 2020-01-18
 title: IT 개발자의 영어 필살기
-tags: [영어, to-memo]
+tags: [to-memo]
 ---
 
 ![](https://image.yes24.com/goods/85385648/XL)
