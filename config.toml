@@ -2,7 +2,7 @@ baseURL = "https://bookshelf-it.benelog.net/"
 languageCode = "ko-KR	"
 defaultContentLanguage = "ko"
 timeZone = "Asia/Seoul"
-title = "IT 책장"
+title = "정상혁의 IT 독서 기록"
 theme = "papercss-hugo-theme"
 disqusShortname = "bookshelf-it-benelog"
 googleAnalytics = "UA-138559685-3"
@@ -17,7 +17,6 @@ googleAnalytics = "UA-138559685-3"
   quality = 99
 
 [params]
-  homeTitle = "정상혁의 IT 독서 기록"
   homeMetaContent = "IT 책장"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
