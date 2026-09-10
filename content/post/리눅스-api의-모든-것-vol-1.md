@@ -1,7 +1,7 @@
 ---
 date: 2012-07-12
 title: 리눅스 API의 모든 것 Vol. 1
-tags: [리눅스, to-read]
+tags: [linux, to-read]
 ---
 
 ![](https://image.yes24.com/goods/7221839/XL)
