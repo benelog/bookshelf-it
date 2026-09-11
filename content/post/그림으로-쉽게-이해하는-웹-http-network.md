@@ -79,8 +79,8 @@ tags: [http, network]
 * 연결 종료 : 4-way handshake
     1. client(FIN_WAIT) --[FIN]--> server(CLOSE_WAIT)
     2. client <--[ACK]-- server
-    4. client(TIME_WAIT) <--[FIN]-- server(LAST_ACK)
-    3. client --[ACK]--> server(CLOSED)
+    3. client(TIME_WAIT) <--[FIN]-- server(LAST_ACK)
+    4. client --[ACK]--> server(CLOSED)
 * 흐름 제어(Flow control)
 * 혼잡 제어(Congestion control)
 * UDP(User Datagram Protocol)

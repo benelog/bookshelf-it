@@ -27,7 +27,7 @@ https://www.yes24.com/Product/Goods/119108069
 
 ## 관련 자료
 * 번역서 정오표 : https://www.onlybook.co.kr/entry/onboarding-errata
-* 저자들이 출연한 파드캐스트 : https://www.youtube.com/watch?v=7qQQMtVj-Cw
+* 저자들이 출연한 팟캐스트 : https://www.youtube.com/watch?v=7qQQMtVj-Cw
 
 ## 인상 깊은 단락
 
@@ -114,7 +114,7 @@ https://www.yes24.com/Product/Goods/119108069
 
 > 실제로 드리센은 지속적으로 통합되어 제공될 수 있는 소프트웨어에 대한 Gitflow 사용을 추천하지 않는다고 자신의 원래 Gitflow 블로그 게시물을 수정했습니다.
 
-드리센은 2010년에 썼던 Git-Flow를 소개한 원래의 블로그 글(https://nvie.com/posts/a-successful-git-branching-model/)을 2020년에 서두에 10년만에 회고를 덧붙였다. 그 회고에서 아래와 같이 언급했다.
+드리센은 2010년에 썼던 Git-Flow를 소개한 원래의 블로그 글(https://nvie.com/posts/a-successful-git-branching-model/)을 2020년에 서두에 10년 만에 회고를 덧붙였다. 그 회고에서 아래와 같이 언급했다.
 
 > If your team is doing continuous delivery of software, I would suggest to adopt a much simpler workflow (like GitHub flow) instead of trying to shoehorn git-flow into your team.
 

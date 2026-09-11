@@ -13,7 +13,7 @@ Netflix의 도구들
 - [Archaius](https://github.com/Netflix/archaius) : Library for configuration management API
     - runtime에 설정 변경 지원
 - [Prana](https://github.com/Netflix/Prana) : Sidecar
-- [Raigad](https://github.com/Netflix/Raigad) : ElasticSearch 관리도
+- [Raigad](https://github.com/Netflix/Raigad) : ElasticSearch 관리 도구
 - Chaos Engineering
     - [The Netflix Simian Army](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
 - key-value 저장소

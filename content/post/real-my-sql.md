@@ -40,7 +40,7 @@ http://www.yes24.com/Product/Goods/6960931
       * `useCursorFetch=true`는 `useServerPrepStmts=true`를 강제함.
       * https://dev.mysql.com/doc/relnotes/connector-j/en/news-8-0-30.html
       * https://vladmihalcea.com/mysql-rewritebatchedstatements/
-* connector-j의 8.0.28까지는 batchUpdate로 BLOB을 넣으려고 하는 NPE 발생
+* connector-j의 8.0.28까지는 batchUpdate로 BLOB을 넣으려고 하면 NPE 발생
     * https://camel-context.tistory.com/81
     * https://dev.mysql.com/doc/relnotes/connector-j/en/news-8-0-29.html
 
