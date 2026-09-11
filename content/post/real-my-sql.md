@@ -10,9 +10,9 @@ http://www.yes24.com/Product/Goods/6960931
 
 
 ## 대용량데이터 처리를 위한 MySQL 최적화
-### "useServerPrepStmt=true" 옵션
+### "useServerPrepStmts=true" 옵션
 * MySQL 서버에서 preparedStatement 를 파싱한 정보를 재활용하도록 유도하는  옵션
-* MySQL Connector/J에서 useServerPrepStmt 옵션의 기본값은 false
+* MySQL Connector/J에서 useServerPrepStmts 옵션의 기본값은 false
     * 별도의 설정을 하지 않으면 JDBC 드라이버가 PreparedStatement를 서버 측에서 준비(prepare)하지 않고, 클라이언트 측에서 SQL 문장을 완성하여 서버로 전송한다는 의미.
     * PreparedStatement의 ? 파라미터를 실제 값으로 채운 완전한 SQL 쿼리 문자열을 매번 서버로 보내 실행하는 방식
     * "클라이언트 측 PreparedStatement" 또는 "에뮬레이션된 PreparedStatement"
@@ -30,7 +30,7 @@ http://www.yes24.com/Product/Goods/6960931
 
 ### 쓰기 성능 높이기 ( rewriteBatchedStatements=true 옵션)
 * batchUpdate 쿼리를 합쳐서 성능을 높여줌
-* "useServerPrepStmt=true" 옵션과 동시에 사용하면 에러가 발생할 수 있음.
+* "useServerPrepStmts=true" 옵션과 동시에 사용하면 에러가 발생할 수 있음.
     * 최대한대로 최적화해야한다면  읽기 DataSource와 쓰기 DataSource를 분리할수도.
 * 1건 레코드 크기* 운반 건수가
 * 합친쿼리의 크기가 MySQL서버의  'max_allowed_packet' 설정값을 넘어가면 에러가 남.
@@ -50,11 +50,11 @@ http://www.yes24.com/Product/Goods/6960931
 이를 해결하기 위해  ResultSet Streaming, 서버 커서 사용할수 있음.
 
 #### ResultSet Streaming
-많은 건의 데이터를 한번에 받지 않고 Streaming으로 흘러보내면서 받는 방법
+많은 건의 데이터를 한번에 받지 않고 Streaming으로 흘려보내면서 받는 방법
 아래와 같이 Statement를 만들어야함.
 
 ```
-PrepaedStatement statement = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+PreparedStatement statement = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
 statement.setFetchSize(Integer.MIN_VALUE);
 ```
 
@@ -78,20 +78,20 @@ statement.setFetchSize(Integer.MIN_VALUE);
 			.fetchSize(Integer.MIN_VALUE)
 			.verifyCursorPosition(false);
 ```
-`ResultSet.TYPE_FORWARD_ONLY` 옵션은 JdbcCursorItemReader 에 이미 위의 Statement 생성시의 반영되어 있음.
+`ResultSet.TYPE_FORWARD_ONLY` 옵션은 JdbcCursorItemReader 에 이미 위의 Statement 생성시에 반영되어 있음.
 
 verifyCursorPosition을 default값인 true로 둘 경우 아래와 같은 에러가 발생함
 
 ```
-peration not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.; nested exception is java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
+Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.; nested exception is java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
 ```
 
 #### 서버 커서
-* MySQL 서버쪽에서 쿼리 결과를 담는 임시테이블을 만듬.
+* MySQL 서버쪽에서 쿼리 결과를 담는 임시테이블을 만듦.
 * JDBC URL에 "useCursorFetch=true" 옵션으로 가능해짐
     * MySQL 5.0.2 이상에서 사용 가능
     * 기본값이 false라 이 옵션이 없으면 클라이언트 커서만을 사용.
-    * useCursorFetch=true이면 useServerPrepStmt도 자동으로 true가 됨.
+    * useCursorFetch=true이면 useServerPrepStmts도 자동으로 true가 됨.
     * 이 옵션을 쓰면 JdbcCursorItemReader.setFetchSize() 로는 실제 쓸 fetchSize (chunk 크기와 똑같은 값 권장)
 * "defaultFetchSize" 옵션
     * 서버 커서를 사용할때 디폴트로 한번에 몇건씩 읽어올지.

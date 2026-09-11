@@ -28,4 +28,4 @@ assertThat(Integer.MIN_VALUE -1).isEqualTo(Integer.MAX_VALUE);
 
 ### p320
 https://code.google.com/archive/p/dbdeploy/ 소개. 2010년이후로 업데이트 되고 있지 않다.
-이 책의 개정판이 나온다면 Liquibase 등이 소개할 듯 하다.
+이 책의 개정판이 나온다면 Liquibase 등이 소개될 듯 하다.

@@ -1,11 +1,11 @@
 ---
-title: Spring Batch Definite Guide
+title: Spring Batch Definitive Guide
 tags: [java,spring,framework]
 date: 2019-09-16
 ---
 
 ## 인상 깊은 단락
-Kindle판 기존
+Kindle판 기준
 
 ### Location 502
 > Batch processing, for this book’s purposes, is defined as the processing of a finite amount of data without interaction or interruption.

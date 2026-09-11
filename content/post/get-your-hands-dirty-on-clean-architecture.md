@@ -7,10 +7,10 @@ date: 2021-03-27
 ## 감상 2022.09.05
 
 책도 얇은 편이지만 재미가 있어서 중간에 끊지를 못하고 끝까지 읽었던 기억이 있습니다.
-웹 어플케이션의 구조를 어떻게 잡을지는 프로젝트마다 매번하는 고민인데, 이 고민에 생각할 거리를 더 던져주는 점에서 유익했습니다.
+웹 어플리케이션의 구조를 어떻게 잡을지는 프로젝트마다 매번하는 고민인데, 이 고민에 생각할 거리를 더 던져주는 점에서 유익했습니다.
 엉클밥 아저씨의 '클린 아키텍처'가 코드가 없어서 아쉬웠던 점을 이 책에서 많이 채워주는 면도 있습니다.
 
-이 책에서 권장하는 구조가 꼭 정답은 아닐 수도 있습니다. 이 책에서 제시한 '계층형 아키텍처'의 문제점이 계층형을 쓰면서 극복이 불가능한 문제는 아닐수도 있다는 생각도 듭니다. 책에서 제시한 persistent layer와 serice layer의 의존관계 역전을 실무 사례를 아직까지 못 본적은 없습니다.
+이 책에서 권장하는 구조가 꼭 정답은 아닐 수도 있습니다. 이 책에서 제시한 '계층형 아키텍처'의 문제점이 계층형을 쓰면서 극복이 불가능한 문제는 아닐수도 있다는 생각도 듭니다. 책에서 제시한 persistent layer와 service layer의 의존관계 역전을 실무 사례를 아직까지 못 본적은 없습니다.
 
 그런데 이 책에서는 아키텍처 결정을 할때 염두해둘만하다는 하나의 방향성을 담고 있기에 읽어볼만하다고 생각합니다.
 그 방향성은 '복잡한 의존성으로 인해 고치기 어려운 짧은 코드를 만들기보다는 때로는 더 많은 코드를 번거롭게 작성하는 것을 감수할수도 있다.' 이라고 저는 느꼈습니다.
@@ -51,7 +51,7 @@ date: 2021-03-27
 
 > The Java Persistence API (the standard ORM-API in the Java world), for instance, requires ORM-managed entities to have a default constructor without arguments that we might want to avoid in our domain model.
 
-> 가령 Java Persistence API(자바 세계의 표준 ORM-API)에서는 ORM이 관리하는 엔티티에 인자가 없는 기본 생성자를 추가하도록 강제한.다 이것이 바로 도메인 모델에서는 포함해서는 안 될 프레임워크에 특하된 결합의 예다.
+> 가령 Java Persistence API(자바 세계의 표준 ORM-API)에서는 ORM이 관리하는 엔티티에 인자가 없는 기본 생성자를 추가하도록 강제한다. 이것이 바로 도메인 모델에서는 포함해서는 안 될 프레임워크에 특화된 결합의 예다.
 
 (메모) Spring JDBC의 BeanPropertyRowMapper도 setter가 필수로 있어야하는 제약이 있었다. Spring framework 5.3부터 추가된 DataClassRowMapper 에서는 그런 문제가 해결되었다.
 
@@ -103,7 +103,7 @@ date: 2021-03-27
 - 의존성 역전
 
 (메모)
-2003년에 스프링의 창시자 로드 존슨이 쓴 'Expert one to one J2EE Design and Development' 의 58페이지에도 아래와 같은 언급이 있다.
+2003년에 스프링의 창시자 로드 존슨이 쓴 'Expert One-on-One J2EE Design and Development' 의 58페이지에도 아래와 같은 언급이 있다.
 
 > In a well-designed J2EE web application, the web tier will be very thin. It will only contain code that's necessary to invoke middle-tier business interfaces on user actions and to display the result.
 
@@ -173,18 +173,18 @@ date: 2021-03-27
 - 왜 조립까지 신경 써야 할까?
 
 ### p93 (번역판 p99)
-(매핑하기 않기 전략 설명 중)
+(매핑하지 않기 전략 설명 중)
 
 > In my experience, many use cases start their life as simple CRUD use cases. Later, they might grow into a full-fledged business use case with a rich behavior and validations that justify a more expensive mapping strategy.
 
-> 내 경험에 의하면 많은 유스케이스들 이간단한 CRUD 유스케이스로 시작했다가 시간이 지남에 따라 값비싼 매핑 전략이 필요한, 풍부한 행동과 유효성 검증을 가진 제대로된 비즈니스 유스케이스로 바뀌어갔기 때문이다.
+> 내 경험에 의하면 많은 유스케이스들이 간단한 CRUD 유스케이스로 시작했다가 시간이 지남에 따라 값비싼 매핑 전략이 필요한, 풍부한 행동과 유효성 검증을 가진 제대로된 비즈니스 유스케이스로 바뀌어갔기 때문이다.
 
 ### p94
 (양방향 매핑 전략 설명)
 
 > This mapping strategy also leads to a clean domain model that is not dirtied by web or persistence concerns. It does not contain JSON or ORM mapping annotations. The single responsibility principle is satisfied.
 
-이 매핑 전략을 웹이나 영속성 관심사로 오염되지 않은 깨끗한 도메인 모델로 이어진다. JSON이나 ORM 매핑 애너테이션도 없어도 된다. 단일 책임 원칙을 만족하는 것이다.
+이 매핑 전략은 웹이나 영속성 관심사로 오염되지 않은 깨끗한 도메인 모델로 이어진다. JSON이나 ORM 매핑 애너테이션도 없어도 된다. 단일 책임 원칙을 만족하는 것이다.
 
 ### p97 (번역서 p105)
 
@@ -203,7 +203,7 @@ date: 2021-03-27
 
 > 상황별로 매핑 전략을 선택하는 것은 모든 상황에 같은 매핑 전략을 사용하는 것보다 분명 더 어렵고 더 많은 커뮤니케이션을 필요로 하겠지만 매핑 가이드라인이 있는 한, 코드가 정확히 해야 하는 일만 수행하면서도 더 유지보수하기 쉬운 코드로 팀에 보상이 되어 돌아올 것이다.
 
-## 9 : Assembing the Application (애플리케이션 조립하기)
+## 9 : Assembling the Application (애플리케이션 조립하기)
 
 - 평범한 코드로 조립하기
 - 스프링의 클래스패스 스캐닝으로 조립하기
@@ -235,11 +235,11 @@ date: 2021-03-27
 - 빌드 아티팩트
 - 유지보수 가능한 소프트웨어를 만드는 데 어떻게 도움이 될까?
 
-### p118 (번역판) p125
+### p118 (번역판 p125)
 
 > With a little work, we can even create a kind of domain-specific language (DSL) on top of the ArchUnit API that allows us to specify all relevant packages within our hexagonal architecture and then automatically checks whether all the dependencies between those packages point in the right direction:
 
-ArchUnit 을 이용한 Hexgonal Architecture 검증 예제
+ArchUnit 을 이용한 Hexagonal Architecture 검증 예제
 
 * [DependencyRuleTests.java](https://github.com/wikibook/clean-architecture/blob/main/src/test/java/io/reflectoring/buckpal/DependencyRuleTests.java)
   * [HexagonalArchitecture](https://github.com/wikibook/clean-architecture/blob/main/src/test/java/io/reflectoring/buckpal/archunit/HexagonalArchitecture.java) 활용
@@ -291,4 +291,4 @@ Release it의 저자 마이클 나이가드가 제안한 아키텍처 결정 기
 
 > So, the only way to make an educated decision about an architecture style is by having experience in different architecture styles. If you are unsure about the hexagonal architecture style, try it out on a small module of the application that you are currently building.
 
-> 따라서 아키텍처 스타일에 대해서 괜찮은 결정을 내리는 유일한 방법은 다른 아키텍처 스타일을 경험해 보는 것이다. 육각형 아키텍처 스타일에 대한 확신이 없다면 지금 만들 고있는 애플리케이션의 작은 모듈에 먼저 시도해 보라.
+> 따라서 아키텍처 스타일에 대해서 괜찮은 결정을 내리는 유일한 방법은 다른 아키텍처 스타일을 경험해 보는 것이다. 육각형 아키텍처 스타일에 대한 확신이 없다면 지금 만들고 있는 애플리케이션의 작은 모듈에 먼저 시도해 보라.

@@ -15,4 +15,4 @@ https://www.yes24.com/Product/UsedShopHub/Hub/121164506
 
 * 당시에 쓴 글 : https://blog.benelog.net/1314658.html
 
-2013년도에 개정판이 나와었고, 지금은 개정판도 절판되었다.
+2013년도에 개정판이 나왔었고, 지금은 개정판도 절판되었다.

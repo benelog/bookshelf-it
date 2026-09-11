@@ -9,4 +9,4 @@ tags: [agile, software-engineering]
 - 케이크 - full stack web developer
 
 ## 인상적인 내용
-사용자 스토리의 원칙..(INVEST - independent, negotiable, valuable, estiable, small, testable)
+사용자 스토리의 원칙..(INVEST - independent, negotiable, valuable, estimable, small, testable)

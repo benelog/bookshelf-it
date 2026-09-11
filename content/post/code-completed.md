@@ -1,6 +1,6 @@
 ---
 date: 2007-07-28
-title: Code completed 2nd Edtion
+title: Code Complete 2nd Edition
 tags: [구현-지침, 설계]
 ---
 

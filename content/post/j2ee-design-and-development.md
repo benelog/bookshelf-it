@@ -11,4 +11,4 @@ tags: [java, spring, 설계, architecture]
 
 ## p120
 
-> Strictly seaping, this is a special case of the Strategy design pattern: it appears different because the interfaces involved are so simple. )
+> Strictly speaking, this is a special case of the Strategy design pattern: it appears different because the interfaces involved are so simple. )

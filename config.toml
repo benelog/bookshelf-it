@@ -1,5 +1,5 @@
 baseURL = "https://bookshelf-it.benelog.net/"
-languageCode = "ko-KR	"
+languageCode = "ko-KR"
 defaultContentLanguage = "ko"
 timeZone = "Asia/Seoul"
 title = "정상혁의 IT 독서 기록"

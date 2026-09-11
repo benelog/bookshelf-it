@@ -41,7 +41,7 @@ https://netflix.github.io/ 도 참조
 > 그래서 이전의 부품을 두 개씩 만들어 '죽지 않는' 서비스를 만드는 대신, 망가져도 되는 하드웨어를 여러 개 준비하는 방법을 택하는 분산 시스템 구성 방법이 함께 발전한다.
 
 ### p87
-카오스 몽키, 카오스 릴라, 카오스 콩 소개
+카오스 몽키, 카오스 고릴라, 카오스 콩 소개
 
 ### p145
 
@@ -51,8 +51,8 @@ Spectator의 이름 규칙 : https://netflix.github.io/spectator/en/latest/intro
 Vizceral demo : https://www.youtube.com/watch?v=PoU03G4WuHI
 
 ### p165-p173
-* Moneta는 mecached 혹은 RocksDB(SSD 사용)에 데이터를 저장하는 구조.
-* 다른 Regision의 Cold 데이터는 SSD에 저장.
+* Moneta는 memcached 혹은 RocksDB(SSD 사용)에 데이터를 저장하는 구조.
+* 다른 Region의 Cold 데이터는 SSD에 저장.
 * 70%에 가까운 비용 절감 효과.
 
 ### p178

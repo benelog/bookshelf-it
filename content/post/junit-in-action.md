@@ -15,10 +15,10 @@ tags: [test, tdd, java, framework]
 
 ### p99
 > 숨겨진 종속성과 전역상태를 피하라
-> 싱글톤은 애플리케이션에 전역 상태를 만들어낸다는 명백한 취약점이 존재한다. 첫번째 예의 INSTANCE 필드가 바로 그 전역 변수이다. 싱그톤 패턴을 꼭 주의해서 사용하기 바란다.
+> 싱글톤은 애플리케이션에 전역 상태를 만들어낸다는 명백한 취약점이 존재한다. 첫번째 예의 INSTANCE 필드가 바로 그 전역 변수이다. 싱글톤 패턴을 꼭 주의해서 사용하기 바란다.
 
 ### p308
-> Ajax 호출을 통시화시켜 테스트를 예측 가능하게 하라. 웹 클라이언트의 Ajax Controller를 NicelyResynchronizingAjaxController로 대체하면 된다.
+> Ajax 호출을 동기화시켜 테스트를 예측 가능하게 하라. 웹 클라이언트의 Ajax Controller를 NicelyResynchronizingAjaxController로 대체하면 된다.
 
 ### p387
 > 90%의 코드를 작성하는 데는 전체 개발 기간의 10%밖에 소요되지 않는다. 허나 나머지 10%의  코드를 완성하는 데에 개발 기간의 90%가 소비된다.

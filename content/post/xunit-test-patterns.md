@@ -24,13 +24,13 @@ date: 2010-11-24
 * 테스트 실행전쟁(p502)
 * 테스트 유틸리티 메소드
 * 가비지 컬렉션 해체(Garbage-Collected Teardown 644)
-* 1회용 신성한 픽스처(Transient Fresh Fixture)
-* 지속되는 신선한 픽스처(Persistenct Fresh Fixture): 각 테스트가 끝나면 해제를 해줘야한다는 점에서 공유 Fixture와는 구별
+* 1회용 신선한 픽스처(Transient Fresh Fixture)
+* 지속되는 신선한 픽스처(Persistent Fresh Fixture): 각 테스트가 끝나면 해제를 해줘야한다는 점에서 공유 Fixture와는 구별
 * 미리 만든 픽스쳐 (Prebuilt Fixture) : Fixture 설치를 xUnit 안에서 할 필요가 없다.
 
 ## 인상적인 단락
 
-#### 머릿말
+#### 머리말
 
 > 나는 단위 테스트의 가치를 굳게 믿는다. 거의 20년동안 단위 테스트 없이 프로그래밍을 해왔었지만, 단위 테스트를 알게 된 다음부터 프로그래머로서의 삶이 훨씬 나아졌다고 느낀다.
 > xUnit프레임웍크와 자동화 테스트는 소프트웨어 개발 역사에 있어 정말 중요한 진보 중 하나라 생각한다

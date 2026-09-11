@@ -31,18 +31,18 @@ tags: [http, network]
     * 역캡슐화 : 받는 쪽에서 헤더를 떼어내며 데이터를 상위 계층으로 이동
 
 ### 3. URL
-* URI(Uniform Resource Identifier)의 하위 요소는 URL(Uniform Resource Location)과 URN(Uniform Resource Name)
+* URI(Uniform Resource Identifier)의 하위 요소는 URL(Uniform Resource Locator)과 URN(Uniform Resource Name)
 * URL 구조 : [프로토콜]://[호스트 주소]:[포트번호]/[경로]?[파라미터]
 * 도메인 : IP주소보다 기억하기 쉬운 형태의 호스트 이름
 * DNS : 도메인과 IP주소를 서로 변환해 주는 시스템
-    * 루트 DNS서버는 최상위 도메인을 관리한느 DNS 서버의 정보를 담고 있음. 전세계에 오직 13대
+    * 루트 DNS서버는 최상위 도메인을 관리하는 DNS 서버의 정보를 담고 있음. 전세계에 오직 13대
 
 ### 4. IP
 * IP(Internet protocol) : 데이터를 잘게 자른 패킷을 목적지까지 전달하는 역할
     * 비연결성 & 신뢰성
 * IPv4 : 32bit 길이
     * 네트워크 부분과 호스트 부분으로 나누어짐.
-    * 마지막 255는 브로캐스트 주소
+    * 마지막 255는 브로드캐스트 주소
     * 클래스 구분
         * A : 0 ~ 127
         * B : 128 ~ 191
@@ -62,7 +62,7 @@ tags: [http, network]
             * 172.16.0.0 ~ 172.31.255.255
             * 192.168.0.0 ~ 192.168.255.255
         * NAT (Network Address Translation)
-            * NAT 테이블을 통해 사설IP와 공인IP를 매핑. 포트 주소 변환(PAT) 또는 NAT 오버로드(NAT Overload)이 많이 사용됨
+            * NAT 테이블을 통해 사설IP와 공인IP를 매핑. 포트 주소 변환(PAT) 또는 NAT 오버로드(NAT Overload)가 많이 사용됨
     * IPv6 : 128bit 길이. 16진수로 표기
         * NAT 지원 하지 않음
 
@@ -74,12 +74,12 @@ tags: [http, network]
     * FIN(Finish) : 연결의 해제를 요청
 * 연결 시작 : 3-way handshake
     1. client --[SYN]--> server(SYN_RECEIVED)
-    2. client <--[ACK+SYN]-- sever
+    2. client <--[ACK+SYN]-- server
     3. client --[ACK]--> server(ESTABLISHED)
 * 연결 종료 : 4-way handshake
     1. client(FIN_WAIT) --[FIN]--> server(CLOSE_WAIT)
-    2. client <--[ACK]-- sever
-    4. client(TIME_WAIT) <--[FIN]-- sever(LAST_ACK)
+    2. client <--[ACK]-- server
+    4. client(TIME_WAIT) <--[FIN]-- server(LAST_ACK)
     3. client --[ACK]--> server(CLOSED)
 * 흐름 제어(Flow control)
 * 혼잡 제어(Congestion control)
@@ -110,7 +110,7 @@ tags: [http, network]
         * 최대 4KB까지 저장
         * HTTP 헤더에 포함되어 전송
     * 웹 스토리지
-        * 저장 기간에 따라서 세션 스토리지와 로컬 스토리지와 나누어짐
+        * 저장 기간에 따라서 세션 스토리지와 로컬 스토리지로 나누어짐
         * 최대 5~10MB까지 저장
         * 클라이언트만 저장. 서버 전송 없음
     * Indexed DB

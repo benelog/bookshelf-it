@@ -4,7 +4,7 @@ title: 실전 OSGI & Spring DM
 tags: [spring, framework]
 ---
 
-## 인상싶은 내용
+## 인상깊은 내용
 ### 39쪽
 클래스 로더의 동작이 설명된 JLS http://durl.kr/gsb , http://durl.kr/gsc
 
